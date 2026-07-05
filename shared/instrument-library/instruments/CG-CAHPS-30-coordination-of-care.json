@@ -1,0 +1,65 @@
+{
+  "bank_id": "CG-CAHPS-30-coordination-of-care",
+  "title": "CG-CAHPS 3.0 — Coordination of Care supplemental items (adult)",
+  "source": "CG-CAHPS",
+  "reuse_tier": "A",
+  "license": "US Government public domain (AHRQ). Users of the CG-CAHPS Survey are free to incorporate supplemental items. Include low-frequency items only if the sample will yield enough responses for analysis.",
+  "provenance": {
+    "source_url": "https://www.ahrq.gov/cahps/surveys-guidance/item-sets/cg/suppl-coordination-of-care-cg-adult.html",
+    "retrieved_date": "2026-07-01",
+    "attribution": "Supplemental Items for the CAHPS Clinician & Group Survey 3.0: Coordination of Care. Agency for Healthcare Research and Quality, Rockville, MD.",
+    "verbatim_ok": true,
+    "wording_level": "full_field_wording"
+  },
+  "languages": ["en", "ru"],
+  "ru_status": "draft_forward_translation — NOT validated. First-pass RU for reconciliation only; run TRAPD before use. verbatim_ok=false for RU.",
+  "scales": {
+    "frequency_never_always": {"en": ["Never", "Sometimes", "Usually", "Always"], "ru_draft": ["Никогда", "Иногда", "Обычно", "Всегда"]},
+    "yes_no": {"en": ["Yes", "No"], "ru_draft": ["Да", "Нет"]},
+    "help_received": {"en": ["Yes, definitely", "Yes, somewhat", "No"], "ru_draft": ["Да, безусловно", "Да, отчасти", "Нет"]}
+  },
+  "items": [
+    {
+      "id": "C-CR1", "domain": "care_coordination", "scale_type": "frequency_never_always",
+      "en": "In the last 6 months, when you visited this provider, how often did he or she have your medical records or other information about your care?",
+      "ru_draft": "За последние 6 месяцев, когда вы приходили к этому врачу, как часто у него/неё были ваши медицинские записи или другая информация о вашем лечении?",
+      "placement": "After core question 15"
+    },
+    {
+      "id": "C-CR2", "domain": "care_coordination", "scale_type": "frequency_never_always",
+      "en": "In the last 6 months, when this provider ordered a blood test, x-ray, or other test for you, how often did you get those results as soon as you needed them?",
+      "ru_draft": "За последние 6 месяцев, когда этот врач назначал вам анализ крови, рентген или другое исследование, как часто вы получали результаты так быстро, как вам было нужно?",
+      "placement": "After core question 17; if used, add skip on core Q17: 'If Never, go to core question 18'"
+    },
+    {
+      "id": "C-CR3", "domain": "care_coordination", "scale_type": "yes_no",
+      "en": "Specialists are doctors like surgeons, heart doctors, allergy doctors, skin doctors, and other doctors who specialize in one area of health care. In the last 6 months, did you see a specialist for a particular health problem?",
+      "ru_draft": "Специалисты — это врачи, такие как хирурги, кардиологи, аллергологи, дерматологи и другие врачи, специализирующиеся в одной области медицины. За последние 6 месяцев обращались ли вы к специалисту по поводу конкретной проблемы со здоровьем?",
+      "placement": "After core question 18; same as C-PCMH2. If No → go to core question 19"
+    },
+    {
+      "id": "C-CR4", "domain": "care_coordination", "scale_type": "frequency_never_always",
+      "en": "In the last 6 months, how often did the provider named in Question 1 seem informed and up-to-date about the care you got from specialists?",
+      "ru_draft": "За последние 6 месяцев, как часто врач, указанный в вопросе 1, был осведомлён и в курсе того лечения, которое вы получали у специалистов?",
+      "placement": "After C-CR3; use with C-CR3; same as C-PCMH3"
+    },
+    {
+      "id": "C-CR5", "domain": "care_coordination", "scale_type": "yes_no",
+      "en": "In the last 6 months, did you get care from more than one kind of health care provider or use more than one kind of health care service?",
+      "ru_draft": "За последние 6 месяцев получали ли вы помощь более чем от одного вида медицинских специалистов или пользовались более чем одним видом медицинских услуг?",
+      "placement": "After core question 20. If No → go to core question 21"
+    },
+    {
+      "id": "C-CR6", "domain": "care_coordination", "scale_type": "yes_no",
+      "en": "In the last 6 months, did you need help from anyone in this provider's office to manage your care among these different providers and services?",
+      "ru_draft": "За последние 6 месяцев нуждались ли вы в помощи кого-либо из сотрудников кабинета этого врача, чтобы согласовать ваше лечение между этими разными специалистами и услугами?",
+      "placement": "After C-CR5; use with C-CR5. If No → go to core question 21"
+    },
+    {
+      "id": "C-CR7", "domain": "care_coordination", "scale_type": "help_received",
+      "en": "In the last 6 months, did you get the help you needed from this provider's office to manage your care among these different providers and services?",
+      "ru_draft": "За последние 6 месяцев получали ли вы необходимую помощь от кабинета этого врача, чтобы согласовать ваше лечение между этими разными специалистами и услугами?",
+      "placement": "After C-CR6; use with C-CR6"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "bank_id": "CDC-HRQOL4-healthy-days",
+  "title": "CDC HRQOL-4 — Healthy Days core module (health status)",
+  "source": "BRFSS",
+  "reuse_tier": "A",
+  "license": "US Government public domain (CDC). Core Healthy Days measures; in BRFSS full sample since 1993, also used in NHANES.",
+  "provenance": {
+    "source_url": "https://www.cdc.gov/hrqol/methods.htm",
+    "retrieved_date": "2026-07-01",
+    "attribution": "CDC Health-Related Quality of Life (HRQOL) Healthy Days Core Module (CDC HRQOL-4). Behavioral Risk Factor Surveillance System, Centers for Disease Control and Prevention.",
+    "verbatim_ok": true,
+    "wording_level": "full_field_wording",
+    "wording_note": "Item wording confirmed across multiple public reproductions of the CDC BRFSS module. Standard interviewer coding: Number of days entered directly; None = 88; Don't know/Not sure = 77; Refused = 99."
+  },
+  "languages": ["en", "ru"],
+  "ru_status": "draft_forward_translation — NOT validated. Run TRAPD before use. verbatim_ok=false for RU.",
+  "scoring_note": "Unhealthy days index = Q2 + Q3, truncated at 30. Healthy days = 30 − unhealthy days. Q4 = activity-limitation days.",
+  "items": [
+    {
+      "id": "HRQOL-Q1", "domain": "health_status", "scale_type": "categorical",
+      "en": "Would you say that in general your health is excellent, very good, good, fair, or poor?",
+      "options_en": ["Excellent", "Very good", "Good", "Fair", "Poor"],
+      "ru_draft": "В целом вы бы оценили своё здоровье как отличное, очень хорошее, хорошее, удовлетворительное или плохое?",
+      "options_ru_draft": ["Отличное", "Очень хорошее", "Хорошее", "Удовлетворительное", "Плохое"],
+      "note": "Self-rated general health; strong single-item proxy for overall HRQOL."
+    },
+    {
+      "id": "HRQOL-Q2", "domain": "health_status", "scale_type": "open_text",
+      "en": "Now thinking about your physical health, which includes physical illness and injury, for how many days during the past 30 days was your physical health not good?",
+      "ru_draft": "Теперь о вашем физическом здоровье, включая болезни и травмы: сколько дней за последние 30 дней ваше физическое здоровье было не в порядке?",
+      "response_coding": "Number of days (0–30); None = 88; Don't know/Not sure = 77; Refused = 99"
+    },
+    {
+      "id": "HRQOL-Q3", "domain": "health_status", "scale_type": "open_text",
+      "en": "Now thinking about your mental health, which includes stress, depression, and problems with emotions, for how many days during the past 30 days was your mental health not good?",
+      "ru_draft": "Теперь о вашем психическом здоровье, включая стресс, депрессию и эмоциональные проблемы: сколько дней за последние 30 дней ваше психическое здоровье было не в порядке?",
+      "response_coding": "Number of days (0–30); None = 88; Don't know/Not sure = 77; Refused = 99",
+      "skip": "If both Q2 AND Q3 = None, skip Q4."
+    },
+    {
+      "id": "HRQOL-Q4", "domain": "health_status", "scale_type": "open_text",
+      "en": "During the past 30 days, for about how many days did poor physical or mental health keep you from doing your usual activities, such as self-care, work, or recreation?",
+      "ru_draft": "За последние 30 дней сколько примерно дней плохое физическое или психическое здоровье мешало вам заниматься обычными делами, такими как самообслуживание, работа или отдых?",
+      "response_coding": "Number of days (0–30); None = 88; Don't know/Not sure = 77; Refused = 99"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "bank_id": "ACS-demographics",
+  "title": "ACS demographic items (person-level)",
+  "source": "ACS_Census",
+  "reuse_tier": "A",
+  "license": "US Government public domain (U.S. Census Bureau). Federal race/ethnicity categories follow OMB standards; use the OMB minimum categories for federal-comparable reporting.",
+  "provenance": {
+    "source_url": "https://www2.census.gov/programs-surveys/acs/methodology/questionnaires/2026/quest26GQ.pdf",
+    "also_see": [
+      "https://www.census.gov/acs/www/about/why-we-ask-each-question/language/",
+      "https://www.census.gov/acs/www/about/why-we-ask-each-question/ethnicity/"
+    ],
+    "retrieved_date": "2026-07-01",
+    "attribution": "American Community Survey questionnaire (2026). U.S. Census Bureau.",
+    "verbatim_ok": true,
+    "wording_level": "item_stem_verbatim",
+    "wording_note": "Item stems verbatim from census.gov; the FULL response-option layout (esp. race sub-categories and educational-attainment levels) should be confirmed against the current ACS questionnaire PDF (publicly available; the PDF blocks automated fetch, so confirm manually). Use OMB minimum categories for federal-comparable reporting."
+  },
+  "languages": ["en", "ru"],
+  "ru_status": "draft_forward_translation — NOT validated. Federal race/Hispanic categories are US OMB constructs: translate labels, do NOT re-localize the conceptual categories. Run TRAPD before use. verbatim_ok=false for RU.",
+  "items": [
+    {
+      "id": "ACS-SEX", "domain": "demographics", "scale_type": "categorical",
+      "en": "What is this person's sex?",
+      "options_en": ["Male", "Female"],
+      "ru_draft": "Какой у этого человека пол?",
+      "options_ru_draft": ["Мужской", "Женский"]
+    },
+    {
+      "id": "ACS-AGE-DOB", "domain": "demographics", "scale_type": "open_text",
+      "en": "What is this person's age and what is this person's date of birth?",
+      "ru_draft": "Сколько этому человеку лет и какова его дата рождения?",
+      "note": "Collected as age (years) + date of birth (month/day/year). Confirm exact field layout against the questionnaire."
+    },
+    {
+      "id": "ACS-HISP", "domain": "demographics", "scale_type": "categorical",
+      "en": "Is this person of Hispanic, Latino, or Spanish origin?",
+      "options_en": [
+        "No, not of Hispanic, Latino, or Spanish origin",
+        "Yes, Mexican, Mexican Am., Chicano",
+        "Yes, Puerto Rican",
+        "Yes, Cuban",
+        "Yes, another Hispanic, Latino, or Spanish origin — print origin"
+      ],
+      "ru_draft": "Является ли этот человек лицом латиноамериканского (Hispanic, Latino) или испанского происхождения?",
+      "options_ru_draft": [
+        "Нет, не латиноамериканского/испанского происхождения",
+        "Да, мексиканского (Mexican, Mexican Am., Chicano)",
+        "Да, пуэрто-риканского",
+        "Да, кубинского",
+        "Да, другого латиноамериканского/испанского происхождения — укажите"
+      ],
+      "note": "OMB treats Hispanic origin and race as separate concepts; ask both. Confirm write-in instructions against questionnaire."
+    },
+    {
+      "id": "ACS-RACE", "domain": "demographics", "scale_type": "categorical",
+      "en": "What is this person's race? Mark one or more boxes AND print origins.",
+      "options_en": [
+        "White — print origins",
+        "Black or African Am. — print origins",
+        "American Indian or Alaska Native — print enrolled or principal tribe(s)",
+        "Asian (e.g., Chinese, Filipino, Asian Indian, Vietnamese, Korean, Japanese, Other Asian) — print details",
+        "Native Hawaiian or Other Pacific Islander (e.g., Native Hawaiian, Samoan, Chamorro, Other) — print details",
+        "Some other race — print race or origin"
+      ],
+      "ru_draft": "Какова раса этого человека? Отметьте один или несколько вариантов И укажите происхождение.",
+      "options_ru_draft": [
+        "Белый — укажите происхождение",
+        "Чёрный или афроамериканец — укажите происхождение",
+        "Американский индеец или коренной житель Аляски — укажите племя",
+        "Азиат (например, китаец, филиппинец, индиец, вьетнамец, кореец, японец, другой) — укажите",
+        "Коренной гаваец или житель тихоокеанских островов — укажите",
+        "Другая раса — укажите расу или происхождение"
+      ],
+      "note": "OMB minimum categories. Confirm the exact 2026 ACS sub-category layout against the questionnaire before fielding."
+    },
+    {
+      "id": "ACS-LANG1", "domain": "demographics", "scale_type": "binary",
+      "en": "Does this person speak a language other than English at home?",
+      "options_en": ["Yes", "No"],
+      "ru_draft": "Говорит ли этот человек дома на языке, отличном от английского?",
+      "options_ru_draft": ["Да", "Нет"],
+      "note": "Gate. If No → skip ACS-LANG2 and ACS-LANG3."
+    },
+    {
+      "id": "ACS-LANG2", "domain": "demographics", "scale_type": "open_text",
+      "en": "What is this language?",
+      "ru_draft": "Какой это язык?",
+      "note": "Asked only if ACS-LANG1 = Yes."
+    },
+    {
+      "id": "ACS-LANG3", "domain": "demographics", "scale_type": "categorical",
+      "en": "How well does this person speak English?",
+      "options_en": ["Very well", "Well", "Not well", "Not at all"],
+      "ru_draft": "Насколько хорошо этот человек говорит по-английски?",
+      "options_ru_draft": ["Очень хорошо", "Хорошо", "Не очень хорошо", "Совсем не говорит"],
+      "note": "Asked only if ACS-LANG1 = Yes. Key for CMA limited-English-proficiency identification and language-group coverage."
+    },
+    {
+      "id": "ACS-EDU", "domain": "demographics", "scale_type": "categorical",
+      "en": "What is the highest degree or level of school this person has COMPLETED?",
+      "ru_draft": "Какой наивысший уровень образования или ученую степень этот человек ЗАВЕРШИЛ?",
+      "note": "Full ordered option list (no schooling → doctorate) — confirm exact levels against the current ACS questionnaire before fielding."
+    }
+  ]
+}

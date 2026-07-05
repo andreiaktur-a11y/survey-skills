@@ -1,0 +1,101 @@
+{
+  "bank_id": "CG-CAHPS-30-core",
+  "title": "CG-CAHPS 3.0 — core reporting items (adult)",
+  "source": "CG-CAHPS",
+  "reuse_tier": "A",
+  "license": "US Government public domain (AHRQ). Free to use; do not misrepresent as endorsed by AHRQ. CAHPS rule: dropping/altering core items forfeits the CAHPS name and cross-site comparability.",
+  "provenance": {
+    "source_url": "https://www.ahrq.gov/cahps/surveys-guidance/cg/about/survey-measures.html",
+    "retrieved_date": "2026-07-01",
+    "attribution": "CAHPS Clinician and Group Survey 3.0 Measures. Agency for Healthcare Research and Quality, Rockville, MD.",
+    "verbatim_ok": true,
+    "wording_level": "measure_stem",
+    "wording_note": "Stems below are the official AHRQ measure descriptions (verbatim). The FULL field wording (the 'In the last 6 months, how often did...' lead-in and exact option labels) lives in the core instrument (Clinician & Group Survey 3.0 ZIP, Adult, English/Spanish). Confirm exact field wording + Spanish (validated) from the ZIP before fielding: https://www.ahrq.gov/cahps/surveys-guidance/cg/index.html"
+  },
+  "languages": ["en", "ru"],
+  "ru_status": "draft_forward_translation — NOT validated. First-pass RU for reconciliation only; must go through TRAPD (see survey-translation-adaptation references) before use. verbatim_ok=false for RU.",
+  "scales": {
+    "frequency_never_always": {
+      "en": ["Never", "Sometimes", "Usually", "Always"],
+      "ru_draft": ["Никогда", "Иногда", "Обычно", "Всегда"]
+    },
+    "rating_0_10": {
+      "en": "0 = Worst provider possible … 10 = Best provider possible",
+      "ru_draft": "0 = Самый плохой врач … 10 = Самый лучший врач"
+    }
+  },
+  "items": [
+    {
+      "id": "CG30-Q6", "domain": "access", "scale_type": "frequency_never_always",
+      "en_stem": "Patient got appointment for urgent care as soon as needed",
+      "ru_draft": "Пациент получал приём по срочной помощи так быстро, как это было нужно",
+      "field_frame_en": "In the last 6 months, when you needed care right away, how often did you get care as soon as you needed?"
+    },
+    {
+      "id": "CG30-Q8", "domain": "access", "scale_type": "frequency_never_always",
+      "en_stem": "Patient got appointment for non-urgent care as soon as needed",
+      "ru_draft": "Пациент получал плановый приём так быстро, как это было нужно",
+      "field_frame_en": "In the last 6 months, how often did you get an appointment for a check-up or routine care as soon as you needed?"
+    },
+    {
+      "id": "CG30-Q10", "domain": "access", "scale_type": "frequency_never_always",
+      "en_stem": "Patient got answer to medical question the same day he/she contacted provider's office",
+      "ru_draft": "Пациент получал ответ на медицинский вопрос в тот же день, когда обращался в кабинет врача",
+      "field_frame_en": "In the last 6 months, when you contacted this provider's office during regular office hours, how often did you get an answer to your medical question that same day?"
+    },
+    {
+      "id": "CG30-Q11", "domain": "communication", "scale_type": "frequency_never_always",
+      "en_stem": "Provider explained things in a way that was easy to understand",
+      "ru_draft": "Врач объяснял всё понятным для вас образом"
+    },
+    {
+      "id": "CG30-Q12", "domain": "communication", "scale_type": "frequency_never_always",
+      "en_stem": "Provider listened carefully to patient",
+      "ru_draft": "Врач внимательно вас выслушивал"
+    },
+    {
+      "id": "CG30-Q14", "domain": "communication", "scale_type": "frequency_never_always",
+      "en_stem": "Provider showed respect for what patient had to say",
+      "ru_draft": "Врач с уважением относился к тому, что вы говорили"
+    },
+    {
+      "id": "CG30-Q15", "domain": "communication", "scale_type": "frequency_never_always",
+      "en_stem": "Provider spent enough time with patient",
+      "ru_draft": "Врач уделял вам достаточно времени"
+    },
+    {
+      "id": "CG30-Q13", "domain": "care_coordination", "scale_type": "frequency_never_always",
+      "en_stem": "Provider knew important information about patient's medical history",
+      "ru_draft": "Врач знал важную информацию о вашей истории болезни"
+    },
+    {
+      "id": "CG30-Q17", "domain": "care_coordination", "scale_type": "frequency_never_always",
+      "en_stem": "Someone from provider's office followed up with patient to give results of blood test, x-ray, or other test",
+      "ru_draft": "Кто-то из кабинета врача связывался с вами, чтобы сообщить результаты анализа крови, рентгена или другого исследования"
+    },
+    {
+      "id": "CG30-Q20", "domain": "care_coordination", "scale_type": "frequency_never_always",
+      "en_stem": "Someone from provider's office talked about all prescription medications being taken",
+      "ru_draft": "Кто-то из кабинета врача обсуждал с вами все принимаемые вами рецептурные лекарства"
+    },
+    {
+      "id": "CG30-Q21", "domain": "provider_rating", "scale_type": "frequency_never_always",
+      "en_stem": "Clerks and receptionists were helpful",
+      "ru_draft": "Регистраторы и администраторы были готовы помочь",
+      "note": "Composite: Helpful, Courteous, and Respectful Office Staff."
+    },
+    {
+      "id": "CG30-Q22", "domain": "provider_rating", "scale_type": "frequency_never_always",
+      "en_stem": "Clerks and receptionists were courteous and respectful",
+      "ru_draft": "Регистраторы и администраторы были вежливы и уважительны",
+      "note": "Composite: Helpful, Courteous, and Respectful Office Staff."
+    },
+    {
+      "id": "CG30-Q18", "domain": "overall_satisfaction", "scale_type": "rating_0_10",
+      "en_stem": "Rating of provider (0–10)",
+      "ru_draft": "Оценка врача (0–10)",
+      "field_frame_en": "Using any number from 0 to 10, where 0 is the worst provider possible and 10 is the best provider possible, what number would you use to rate this provider?",
+      "note": "Standard overall-experience anchor; also serves overall_satisfaction."
+    }
+  ]
+}
