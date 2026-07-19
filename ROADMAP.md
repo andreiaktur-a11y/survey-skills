@@ -7,7 +7,7 @@ repo (`survey-skills`) so it can be fetched from any new chat or project.
 - **Owner:** Andrei Akhtyrskii, PhD — Measure & Meaning Research (measuremeaning.com)
 - **Repo (source of truth for artifacts):** https://github.com/andreiaktur-a11y/survey-skills
 - **Language:** conversation in Russian; artifacts (skills, templates, code) in English
-- **Last updated:** 2026-07-15
+- **Last updated:** 2026-07-19
 
 ---
 
@@ -62,11 +62,13 @@ Shared skeleton across domains: Executive summary (decision-first) → Objective
 Method (brief) → Sample & coverage → Results by objective → **Driver analysis (the
 differentiator)** → Recommended actions → Limitations → Appendix (instrument provenance).
 
-| Domain | Sample report (.docx) | Automation template in repo | Website "what you receive" |
-|---|---|---|---|
-| **Employee / HR** | ✅ v1 built (`Employee_Engagement_Retention_SAMPLE.docx`) — eNPS, satisfaction, burnout by segment, PsyCap, values, stay-vs-leave driver model | ⬜ next candidate (A) | ⬜ |
-| **CX / Patient** | ⬜ (top-box, coordination-of-care, CAHPS-style) | ⬜ | ⬜ |
-| **Brand / Market** | ⬜ (awareness, associations, share) | ⬜ | ⬜ |
+| Domain | Sample report (.docx) | Instrument (questionnaire + codebook) | Automation template in repo | Website "what you receive" |
+|---|---|---|---|---|
+| **Employee / HR** | ✅ **v3** (`Employee_Engagement_Retention_SAMPLE_v3.docx`) — 15 pp, 9 per-module visualizations, driver model, screening funnel, payroll weighting | ✅ v0.1 — `questionnaire-employee-census.md` (60 closed + 3 open, full programming spec) + `codebook-employee-census.md` / `.csv` | ⬜ **next candidate (A)** — build from v3 + codebook CSV | ⬜ |
+| **CX / Patient** | ⬜ (top-box, coordination-of-care, CAHPS-style) | ⬜ | ⬜ | ⬜ |
+| **Brand / Market** | ⬜ (awareness, associations, share) | ⬜ | ⬜ | ⬜ |
+
+Module framework (item bank + methodological rationale): `module-framework.md` **v0.4**.
 
 Repo anchors: `skills/domain-hr-employee/`, `skills/survey-reporting/references/report-structure.md`,
 `skills/domain-legal/references/report-template.md` (pattern for the `{{braces}}` automation).
@@ -81,16 +83,32 @@ Repo anchors: `skills/domain-hr-employee/`, `skills/survey-reporting/references/
 - **2026-07-15** MVP = **fully static**, leads via Formspree, no backend.
 - **2026-07-15** Standing content rules confirmed apply to all report templates.
 - **2026-07-15** Employee sample report v1 produced (fully synthetic, labeled illustrative).
+- **2026-07-19** PSY module dropped (PCQ/PsyCap = tier C); PsyCap guardrail added to the framework.
+- **2026-07-19** GAP scale = **7-point fully verbalized**, midpoint retained, with an **off-scale "Not applicable"** on satisfaction items only. N/A is coded `99`, excluded from means, reported as a coverage statistic — **never recoded to the midpoint** (no-experience ≠ neutral).
+- **2026-07-19** GAP quadrant boundaries = **within-survey medians**, not the scale midpoint. Reviewed and reconfirmed: stated importance has a ceiling, so a midpoint-anchored cross leaves the lower quadrants permanently empty. Drift is offset by the absolute gap-rank chart and, from wave 2, a grey reference cross at the prior wave's medians.
+- **2026-07-19** Tenure bands replaced with a **non-overlapping grid**: Less than 1 year / 1–2 / 3–6 / 7 years or more. The retired 1–3 / 3–7 grid double-assigned employees at exactly 3 and 7 years. HRIS extracts are re-banded to match the instrument, not the reverse.
+- **2026-07-19** Sample-report **disclaimer policy**: the illustrative/synthetic label is mandatory on the **cover block and running header**; per-figure caption labels are optional.
+- **2026-07-19** Employee sample report **v3** issued (owner layout + agreed corrections). Fielded instrument and codebook split out as separate repo artifacts.
+- **2026-07-19** Open decision §5.1 closed: real project data are used as a **structural reference only**; all public samples stay synthetic + illustrative.
 
 ---
 
 ## 5. Open decisions (waiting on owner)
 
-1. **Real vs. synthetic data for report templates.** Default = synthetic. If anonymizable
-   real outputs exist (e.g. the Engage motivation report), prepare a working template
-   variant on that basis. → *pending answer.*
-2. **Next step:** (A) turn Employee sample into an automation-ready repo template, or
-   (B) build the next domain sample (CX/Patient or Brand/Market). → *pending answer.*
+**Next build step.** (A) `{{braces}}` automation template from the v3 report + codebook CSV, (B) clear the eight flags below in one short session, or (C) start the CX/Patient domain. → *recommended: B, then A — several flags land directly in the report text, so clearing them after the template is built means rebuilding it.*
+
+Carried flags, tracked in the artifacts that own them:
+
+| # | Flag | Lives in |
+|---|---|---|
+| 1 | Extended GAP categories (MEN, EVT) — standard in EVP configuration or strictly optional? | `module-framework.md` §11.1 |
+| 2 | Trade-off block (MaxDiff-lite) — in v1 or design-on-request? | `module-framework.md` §11.1 |
+| 3 | `OPN-03` — empty slot or standing third open-end? | `module-framework.md` §11.1 |
+| 4 | Sample report states "74 closed items"; the instrument has **60**. Recommend correcting the report. | `questionnaire-employee-census.md` §12 |
+| 5 | `BRN_TIER` cutpoints (6–13 / 14–21 / 22–30) are documented but arbitrary — no normative sample behind them. Keep labeled-arbitrary, anchor after 3–5 engagements, or drop tier language? | `codebook-employee-census.md` §9 |
+| 6 | Weight-trimming bounds (0.4–2.5) — confirm or set per client. | `codebook-employee-census.md` §9 |
+| 7 | `STY-02` — report separately (current) or as a composite with `STY-01`? Recommend separate. | `codebook-employee-census.md` §9 |
+| 8 | Fig. 2 caption in v3 still carries the per-figure synthetic label the other eight lost — remove for consistency? | v3 report |
 
 ---
 
@@ -108,8 +126,17 @@ Repo anchors: `skills/domain-hr-employee/`, `skills/survey-reporting/references/
 
 ## 7. STATUS (latest)
 
-- **Done:** Phase 0 decisions; Employee Engagement & Retention sample report v1 (9-page
-  .docx, decision-first, PsyCap + stay-vs-leave driver model, illustrative/synthetic).
-- **Next:** owner to choose (A) automate Employee template in repo, or (B) next domain
-  sample; and confirm synthetic vs. real-data variant.
-- **Open:** the two decisions in §5.
+**Session of 2026-07-19 — Employee domain build-out.**
+
+- **Done:**
+  - `module-framework.md` **v0.4** — 18-category GAP set, 7-point verbalized scales with off-scale N/A, non-overlapping tenure bands, quadrant-boundary rationale, decisions log.
+  - **Sample report v3** — 15 pp, nine per-module visualizations (engagement bars, eNPS stacks with CIs, importance × satisfaction quadrant map, ranked gaps, burnout tiers, demand-vs-recovery 2×2, open-end themes, Shapley driver dot plot with cost tags, stated-vs-derived slope chart). Built on the owner's own layout and logo; XSD-validated.
+  - **Field questionnaire v0.1** — 60 closed + 3 open items, ≈13–16 min, full programming spec (no forced response, N/A rendered off-scale, reverse-keyed items never flipped on screen, segmentation last with the trade-off disclosed, support-resources link mandatory whenever the burnout block is fielded).
+  - **Codebook v0.1** — human-readable (`.md`) and machine-readable (`.csv`, 81 variables) plus its generator; index formulas, reverse-keying, missing-code system, pre-registered screening funnel, weighting scheme, suppression rules.
+  - Figure generation scripts (`make_figs.py`, `make_fig5_v3.py`) and the v2 document builder (`build_report.js`).
+
+- **Next:** clear the eight flags in §5 (short session), then build the `{{braces}}` automation template from the v3 report + codebook CSV. That closes the Employee domain end-to-end: instrument → codebook → report template → website "what you receive".
+
+- **Open:** the eight flags in §5.
+
+- **Note for the next session:** open a fresh chat, attach `ROADMAP.md`, `module-framework.md` v0.4, `codebook-employee-census-v0_1.csv`, and the v3 report. That is enough context to resume without re-explaining anything.
