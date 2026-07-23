@@ -7,7 +7,7 @@ repo (`survey-skills`) so it can be fetched from any new chat or project.
 - **Owner:** Andrei Akhtyrskii, PhD — Measure & Meaning Research (measuremeaning.com)
 - **Repo (source of truth for artifacts):** https://github.com/andreiaktur-a11y/survey-skills
 - **Language:** conversation in Russian; artifacts (skills, templates, code) in English
-- **Last updated:** 2026-07-19
+- **Last updated:** 2026-07-22
 
 ---
 
@@ -64,7 +64,7 @@ differentiator)** → Recommended actions → Limitations → Appendix (instrume
 
 | Domain | Sample report (.docx) | Instrument (questionnaire + codebook) | Automation template in repo | Website "what you receive" |
 |---|---|---|---|---|
-| **Employee / HR** | ✅ **v3** (`Employee_Engagement_Retention_SAMPLE_v3.docx`) — 15 pp, 9 per-module visualizations, driver model, screening funnel, payroll weighting | ✅ v0.1 — `questionnaire-employee-census.md` (60 closed + 3 open, full programming spec) + `codebook-employee-census.md` / `.csv` | ⬜ **next candidate (A)** — build from v3 + codebook CSV | ⬜ |
+| **Employee / HR** | ✅ **v3.2** (`Employee_Engagement_Retention_SAMPLE_v3_2.docx`) — 17 pp, 11 figures incl. STAY_TYPE 2×2 and STY-02 divergence exhibit, three-model driver section, per-column screening funnel | ✅ **v0.3** — `questionnaire-employee-census.md` + `codebook-employee-census.md` / `.csv` (incl. `spec_driver_models` / `spec_predictors` machine-readable model spec) | ✅ **v1.2** — `report-template-employee-census.md` (D1–D8/F1–F2 release; `{{n_predictors}}` computed; Block X conditional §4.6) | ⬜ |
 | **CX / Patient** | ⬜ (top-box, coordination-of-care, CAHPS-style) | ⬜ | ⬜ | ⬜ |
 | **Brand / Market** | ⬜ (awareness, associations, share) | ⬜ | ⬜ | ⬜ |
 
@@ -90,27 +90,20 @@ Repo anchors: `skills/domain-hr-employee/`, `skills/survey-reporting/references/
 - **2026-07-19** Sample-report **disclaimer policy**: the illustrative/synthetic label is mandatory on the **cover block and running header**; per-figure caption labels are optional.
 - **2026-07-19** Employee sample report **v3** issued (owner layout + agreed corrections). Fielded instrument and codebook split out as separate repo artifacts.
 - **2026-07-19** Open decision §5.1 closed: real project data are used as a **structural reference only**; all public samples stay synthetic + illustrative.
+- **2026-07-19** Flags session B (external analytical review, 14 points → 9 confirmed defects): triage recorded in `external-review-triage-2026-07-22.md` (superseded by the consolidated handoff).
+- **2026-07-22** Flags session C — **v0.3 release decided** (consolidated handoff `employee-handoff-2026-07-22.md`): **D1** IDX_BRN prorated (≥ 5 of 6, range 6–30 restored) · **D2** straightlining = zero variance across a full 18-item GAP column, per column · **D3** ENG-05 criterion contamination → `IDX_ENG_DRIVER` (5 items, model-internal only; `IDX_ENG` unchanged as headline/trend) · **D4** canonical 20-predictor set, `{{n_predictors}}` computed, never typed · **D5** "retention impact per dollar" → "retention leverage" (no ROI modeling) · **D6** custom closed items capped at 8; BRN and GAP never trimmed · **D7** STAY_TYPE 2×2 (top-2-box, pre-registered; reluctant stayers) · **D8** STY-02 divergence model — exhibit + prose only, never a second ranked list · **F1/F2** PNTS wording and anonymity statement fixed.
+- **2026-07-22** **Block X** (client add-on module, `CUS-*` prefix) adopted: descriptive only, never enters any index or driver model; excluded from screening rules; declared in per-engagement codebook addendum; conditional §4.6 in the template. Enabled by the **allowlist parsing principle**: the pipeline reads only canonical variable IDs declared in the codebook; unrecognised columns are ignored silently.
+- **2026-07-22** Next-build-step decision (old §5) resolved as **B, then A**: flags cleared (07-19 / 07-22), then the automation template built — `report-template-employee-census.md` v1.2 now in the repo. *(Owner confirmation recorded in Session C.)*
+- **2026-07-22** Session C sign-offs closed: next-build-step = **path A confirmed by owner**; push of the release commit **confirmed by owner**; items delegated by owner to Claude and decided as follows — F1 note in questionnaire §7 **keeps** the operational sentence "Treated as missing for breakouts, and its rate is reported" (consistent with codebook §2, code 98); questionnaire §13 flag 1 *(v0.3 note, per D6)* interpretation **confirmed** (CORE/BRN trimming applies only where the burnout tier is not a deliverable — the only reading consistent with D1); SAMPLE v3.2 **keeps** the rendered D7/D8 exhibits and the template v1.2 figure numbering.
+- **2026-07-22** v0.3 release executed across Sessions A–C: codebook v0.3 (.md + .csv), questionnaire v0.3, template v1.2, SAMPLE v3.2; single release commit to `survey-skills@main`.
 
 ---
 
 ## 5. Open decisions (waiting on owner)
 
-**Next build step.** (A) `{{braces}}` automation template from the v3 report + codebook CSV, (B) clear the eight flags below in one short session, or (C) start the CX/Patient domain. → *recommended: B, then A — several flags land directly in the report text, so clearing them after the template is built means rebuilding it.*
+None from the v0.3 release — all Session C sign-offs are closed and recorded in the decisions log (2026-07-22; items 3–5 were delegated by the owner to Claude and are reversible on request).
 
-Carried flags, tracked in the artifacts that own them:
-
-| # | Flag | Lives in |
-|---|---|---|
-| 1 | Extended GAP categories (MEN, EVT) — standard in EVP configuration or strictly optional? | `module-framework.md` §11.1 |
-| 2 | Trade-off block (MaxDiff-lite) — in v1 or design-on-request? | `module-framework.md` §11.1 |
-| 3 | `OPN-03` — empty slot or standing third open-end? | `module-framework.md` §11.1 |
-| 4 | Sample report states "74 closed items"; the instrument has **60**. Recommend correcting the report. | `questionnaire-employee-census.md` §12 |
-| 5 | `BRN_TIER` cutpoints (6–13 / 14–21 / 22–30) are documented but arbitrary — no normative sample behind them. Keep labeled-arbitrary, anchor after 3–5 engagements, or drop tier language? | `codebook-employee-census.md` §9 |
-| 6 | Weight-trimming bounds (0.4–2.5) — confirm or set per client. | `codebook-employee-census.md` §9 |
-| 7 | `STY-02` — report separately (current) or as a composite with `STY-01`? Recommend separate. | `codebook-employee-census.md` §9 |
-| 8 | Fig. 2 caption in v3 still carries the per-figure synthetic label the other eight lost — remove for consistency? | v3 report |
-
----
+Carried: `module-framework.md` §11.1 still lists as open the three flags resolved 2026-07-19 and recorded in questionnaire v0.3 §13 (MEN/EVT = EVP-only configurations; MaxDiff-lite = design-on-request; `OPN-03` = empty per-engagement slot) — sync the framework doc next time it is edited (not part of this release).
 
 ## 6. How we work (per-session ritual)
 
@@ -126,17 +119,17 @@ Carried flags, tracked in the artifacts that own them:
 
 ## 7. STATUS (latest)
 
-**Session of 2026-07-19 — Employee domain build-out.**
+**Sessions A–C of 2026-07-22 — Employee domain v0.3 release.**
 
 - **Done:**
-  - `module-framework.md` **v0.4** — 18-category GAP set, 7-point verbalized scales with off-scale N/A, non-overlapping tenure bands, quadrant-boundary rationale, decisions log.
-  - **Sample report v3** — 15 pp, nine per-module visualizations (engagement bars, eNPS stacks with CIs, importance × satisfaction quadrant map, ranked gaps, burnout tiers, demand-vs-recovery 2×2, open-end themes, Shapley driver dot plot with cost tags, stated-vs-derived slope chart). Built on the owner's own layout and logo; XSD-validated.
-  - **Field questionnaire v0.1** — 60 closed + 3 open items, ≈13–16 min, full programming spec (no forced response, N/A rendered off-scale, reverse-keyed items never flipped on screen, segmentation last with the trade-off disclosed, support-resources link mandatory whenever the burnout block is fielded).
-  - **Codebook v0.1** — human-readable (`.md`) and machine-readable (`.csv`, 81 variables) plus its generator; index formulas, reverse-keying, missing-code system, pre-registered screening funnel, weighting scheme, suppression rules.
-  - Figure generation scripts (`make_figs.py`, `make_fig5_v3.py`) and the v2 document builder (`build_report.js`).
+  - **Codebook v0.3** (.md + .csv) — D1 prorated IDX_BRN, D2 per-column straightlining, D3 `IDX_ENG_DRIVER`, D4 canonical 20-predictor set with machine-readable `spec_driver_models` / `spec_predictors` rows, D7 `STAY_TYPE`, D8 divergence model, Block X rules, allowlist principle.
+  - **Questionnaire v0.3** — F1/F2 wording, Block X placement (§8, before OPEN), D6 length budget, "trim BRN" guidance deleted.
+  - **Template v1.2** — three-model §05 with STAY_TYPE 2×2 (Fig. 8) and divergence exhibit (Fig. 11), retention-leverage wording, `{{n_predictors}}` computed, conditional §4.6, Appendix A/D disclosures.
+  - **SAMPLE v3.2** — rendered reference of template v1.2: D7/D8 exhibits added, figures renumbered (Shapley → Fig. 9, stated-vs-derived → Fig. 10), per-column screening funnel (flags 26: importance 15 / satisfaction 8 / both 3; excluded 11; totals 1,022 → 987 unchanged), Appendix D rebuilt on the 20-predictor / three-model spec, retention-leverage wording, Appendix A burnout-index boilerplate per D1, trimming bounds disclosed. Numeric-leftover sweep clean (one extra "summed score" leftover found in §4.3 and fixed).
+  - Single release commit to `survey-skills@main` (this commit).
 
-- **Next:** clear the eight flags in §5 (short session), then build the `{{braces}}` automation template from the v3 report + codebook CSV. That closes the Employee domain end-to-end: instrument → codebook → report template → website "what you receive".
+- **Next (Phase 1-A, pipeline — recorded backlog, not artifact edits):** deterministic `driver_models` spec (predictor missing-data rule, `WT` usage, exact Shapley procedure incl. R² baseline over 2²⁰ subsets); psychometric evidence base (alpha/omega, item-total, dimensionality — internal, feeds `BRN_TIER` re-anchoring after 3–5 engagements); deterministic/interpretation split (`analysis_results.json` + `report_content.json` + template → DOCX); Northgate regression fixture as the permanent pipeline test case; automated QA layer (unresolved `{{braces}}`, cross-section number reconciliation, predictor count vs. model, suppression leakage, sample-mode language).
 
-- **Open:** the eight flags in §5.
+- **Open:** none from this release; carried module-framework flags listed in §5.
 
-- **Note for the next session:** open a fresh chat, attach `ROADMAP.md`, `module-framework.md` v0.4, `codebook-employee-census-v0_1.csv`, and the v3 report. That is enough context to resume without re-explaining anything.
+- **Note for the next session:** open a fresh chat, attach `ROADMAP.md`, `employee-handoff-2026-07-22.md`, and the four v0.3/v1.2 artifacts from the repo. The project-knowledge copy of ROADMAP.md is stale (2026-07-15) — replace it with this version.
