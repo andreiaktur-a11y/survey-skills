@@ -1,14 +1,14 @@
 # Measure & Meaning — Employee Domain
 
-## Field Questionnaire · Annual Engagement & Retention Census · v0.1
+## Field Questionnaire · Annual Engagement & Retention Census · v0.3
 
-**Status:** draft for owner review · **Repo target:** `skills/domain-hr-employee/references/questionnaire-employee-census.md`
-**Configuration:** CORE + NPS + GAP (18 core) + BRN + STAY + OPEN + segmentation — the "annual engagement census" row of the module map (§1 of `module-framework.md` v0.3).
-**Companion artifacts:** `module-framework.md` v0.3 (item bank & rationale) · `codebook-employee-census.md` (variables, indices, screening) · `Employee_Engagement_Retention_SAMPLE_v3.docx` (what the client receives).
+**Status:** release per consolidated handoff 2026-07-22 (flags session C) — implements F1, F2, D6, Block X placement · **Repo target:** `skills/domain-hr-employee/references/questionnaire-employee-census.md`
+**Configuration:** CORE + NPS + GAP (18 core) + BRN + STAY + OPEN + segmentation — the "annual engagement census" row of the module map (§1 of `module-framework.md` v0.4) — plus an optional per-engagement Block X (client add-on items, §8).
+**Companion artifacts:** `module-framework.md` v0.4 (item bank & rationale) · `codebook-employee-census.md` v0.3 + `codebook-employee-census.csv` v0.3 (variables, indices, screening, machine-readable model spec) · `report-template-employee-census.md` v1.2 (deliverable template) · `Employee_Engagement_Retention_SAMPLE_v3_2.docx` (what the client receives).
 
 **All items are original Measure & Meaning formulations (IP tier A).** No wording is taken from Gallup Q12, UWES, MBI, OLBI, PCQ, or any vendor instrument.
 
-**Length:** 60 closed items + 3 open-ends ≈ 13–16 minutes median (budget rule: 4–6 closed items/minute; ~45–60 s per open-end). This sits at the top of the 12–15-minute census budget — if the client adds site-specific items, trim BRN to 4 items or drop `OPN-03` rather than exceeding it.
+**Length:** 60 closed items + 3 open-ends ≈ 13–16 minutes median (budget rule: 4–6 closed items/minute; ~45–60 s per open-end). Client add-on items are **additive and budgeted**, never traded against the core (owner decision 2026-07-22, D6): custom closed items are capped at **8** (≈ +1.5–2 minutes), and in that configuration the instrument runs **~15–17 minutes** — a figure stated in the report's method section. **BRN is never trimmed** while the burnout tier is a deliverable — `IDX_BRN` and `BRN_TIER` require ≥ 5 of 6 items answered (codebook §4.2). **The 18-category GAP set is never trimmed** — fewer categories move `IMP_MED`/`SAT_MED` and break quadrant comparability across waves and clients. `OPN-03` is the free custom open-end slot and costs nothing when left unfielded.
 
 ---
 
@@ -22,7 +22,7 @@
 | **Back button** | Enabled through the end of the OPEN block; disabled after the segmentation block begins. |
 | **Progress bar** | Shown. Employees over-estimate length in matrix-heavy instruments. |
 | **Save & resume** | Enabled (production shift workers may be interrupted). |
-| **Devices** | Mobile-first rendering required; GAP matrix must reflow to a card layout on narrow screens (see §3 note). |
+| **Devices** | Mobile-first rendering required; GAP matrix must reflow to a card layout on narrow screens (see §5 note). |
 | **Kiosk mode** | Shared production-floor stations: clear session on submit; no autofill; no device fingerprint used for identification. Identical device signatures are expected by design. |
 | **Timing capture** | Record page-level timestamps for every screen — required for the speeder screen (§ codebook). |
 | **Display order capture** | Where category order is randomized, store the realized order per respondent. |
@@ -36,7 +36,7 @@
 >
 > This survey asks how it is to work at [Organization] — what is working, what is not, and what would make the biggest difference. It takes about 15 minutes.
 >
-> **Your answers are anonymous.** The survey is run by Measure & Meaning Research, an independent research firm. [Organization] receives grouped results only — never individual responses. **No result is ever reported for a group of fewer than 5 people**, so small teams cannot be identified by subtraction.
+> **Your answers are anonymous.** The survey is run by Measure & Meaning Research, an independent research firm. [Organization] receives grouped results only — never individual responses. **No result is ever reported for a group of fewer than 5 people, and additional results are withheld whenever a small group could be worked out from the ones that are shown.**
 >
 > There are no right answers, and nothing here is a test of you. Please answer for how things actually are, not how they are supposed to be.
 >
@@ -190,11 +190,23 @@ Very dissatisfied · Dissatisfied · Somewhat dissatisfied · Neither satisfied 
 
 ☐ Planning to stay ☐ Open to outside offers ☐ Actively looking ☐ Prefer not to say
 
-*Programming note:* "Prefer not to say" is offered here and nowhere else in the instrument. Intent to leave is the single most identity-exposing question in an employee survey; refusing it must be easier than lying on it. Treated as missing, and its rate is reported.
+*Programming note:* "Prefer not to say" is offered here and on the segmentation items — nowhere among the attitudinal items. Intent to leave is the single most identity-exposing attitudinal question in an employee survey; refusing it must be easier than lying on it. Treated as missing for breakouts, and its rate is reported.
 
 ---
 
-## 8 · Block G — Open-ended (OPEN)
+## 8 · Block X — Client add-on items (optional, per engagement)
+
+*Fielded only when the engagement adds client-requested items (e.g. evaluating an internal programme or event). Absent from the standard census — when absent, the instrument proceeds directly from Block F to Block G.*
+
+- **Placement:** closed `CUS-*` items sit here — **after Block F (STAY), before Block G (OPEN)** — so the open-ended verbatims are not lost to break-off. The open-ended custom item uses the existing `OPN-03` slot (§9); no additional open-end screen is created.
+- **Scales:** must reuse an existing scale from codebook §2 (AGREE-5, SAT-5, IMP-7, SAT-7, NPS-11). New scale types require an owner decision — they break shared rendering and screening logic.
+- **Budget:** capped at 8 closed items (≈ +1.5–2 minutes; see the length note in the header, D6).
+- **Screening:** `CUS-*` items are **excluded** from the straightlining and speeding screens — variable block length would make those rules non-comparable across engagements.
+- **Everything else** — the `CUS-` ID convention, index and driver-model isolation, per-engagement documentation in the codebook addendum, and conditional reporting as §4.6 of the deliverable — is governed by **codebook v0.3 §10**; the rules are deliberately not duplicated here.
+
+---
+
+## 9 · Block G — Open-ended (OPEN)
 
 *One screen, three boxes. Placed after the closed items so it does not prime them, and before segmentation so break-off does not cost the qualitative data.*
 
@@ -210,7 +222,7 @@ Very dissatisfied · Dissatisfied · Somewhat dissatisfied · Neither satisfied 
 
 ---
 
-## 9 · Block H — About you (segmentation)
+## 10 · Block H — About you (segmentation)
 
 *Placed last, deliberately — see the trade-off note below. One screen.*
 
@@ -234,7 +246,7 @@ Very dissatisfied · Dissatisfied · Somewhat dissatisfied · Neither satisfied 
 
 ---
 
-## 10 · Closing screen
+## 11 · Closing screen
 
 > ### Thank you.
 >
@@ -248,26 +260,29 @@ Very dissatisfied · Dissatisfied · Somewhat dissatisfied · Neither satisfied 
 
 ---
 
-## 11 · Block order rationale (documented, per the reporting standard)
+## 12 · Block order rationale (documented, per the reporting standard)
 
 1. **SAT-00 first** — a global judgment collected before the 18 specific conditions build it up piecewise.
 2. **CORE, then NPS** — warm, non-sensitive, quick momentum.
 3. **GAP in the middle** — the heavy 36-rating block sits where commitment is highest and fatigue has not yet peaked.
 4. **BRN, then STAY** — sensitive items after rapport is established.
-5. **OPEN before segmentation** — verbatims are the most valuable content per respondent-minute; they should not be lost to demographic-wall break-off.
-6. **Segmentation last** — anonymity-protective (see §9).
+5. **Block X (when fielded) after STAY, before OPEN** — custom closed items ride on established commitment without displacing the verbatims (codebook §10).
+6. **OPEN before segmentation** — verbatims are the most valuable content per respondent-minute; they should not be lost to demographic-wall break-off.
+7. **Segmentation last** — anonymity-protective (see §10).
 
 *Known limitation:* placing STAY after the driver batteries risks priming the criterion with the content of the predictors. The alternative — criterion first — primes in the other direction. There is no placement that removes the effect; the order is fixed across waves so that whatever effect exists is constant and does not contaminate trend comparison. This is stated in the technical appendix.
 
 ---
 
-## 12 · Open flags (owner decision required)
+## 13 · Flags — all resolved (owner decisions, 2026-07-19, flags session B)
 
-1. **Extended GAP categories (MEN, EVT).** Not included in this census configuration — 18 pairs already consume 6–8 minutes and the census budget is 12–15. Include only in EVP-focused engagements where CORE/BRN are trimmed? → *pending (carried from `module-framework.md` §11.1).*
-2. **Trade-off block (MaxDiff-lite).** Not included. Confirm "design-on-request" status for v1? → *pending (carried from §11.1).*
-3. **`OPN-03` in the standard census.** Currently an empty slot. Leave empty by default, or make it a standing third question? → *new flag.*
-4. **Consistency with the sample report.** The report's method section states "74 closed items"; this instrument as specified contains **60** (53 substantive + 5 segmentation + 2 attention checks). One of the two must change — recommend updating the report text to 60 (and median time from 13.4 to a figure consistent with the 13–16-minute estimate). → *new flag.*
+1. **Extended GAP categories (MEN, EVT) — resolved.** They stay in the item bank (`module-framework.md`) and are fielded **only in EVP-focused configurations where CORE/BRN are trimmed**. Not part of the standard census — the 18-pair set already consumes 6–8 of the 12–15-minute budget. *(v0.3 note, per D6: trimming CORE/BRN applies only to configurations where the burnout tier is not a deliverable. In the standard census BRN is never trimmed — `IDX_BRN`/`BRN_TIER` require ≥ 5 of 6 items — and client add-ons are handled additively via Block X, §8, not by trading away core modules.)*
+2. **Trade-off block (MaxDiff-lite) — resolved.** **Design-on-request for v1**; not part of the standard deliverable or the report template.
+3. **`OPN-03` — resolved.** Remains an **empty per-engagement slot** (codebook code `.n` when not fielded); no standing third open-end.
+4. **Consistency with the sample report — resolved, in the report's favor of modularity.** The report and template **do not state a fixed closed-item count**: the census is modular (client add-ons possible; pulse surveys are subset configurations), so the method section describes modules, not counts. The sample report's method section was rewritten accordingly (v3.1). **Median completion time 13.4 minutes stays** — consistent with a ~60-item instrument at 4–6 items/minute. The template carries an *optional* `{{n_closed_items}}` field, **empty by default**, for engagements where a contract requires a stated count. This questionnaire's own header may state its configuration count (60 closed + 3 open) — the rule applies to the client-facing report, not to the field instrument spec.
+
+*No open flags remain in this document.*
 
 ---
 
-*Document owner: A. Akhtyrskii · Prepared with Claude · v0.1 · 2026-07-19*
+*Document owner: A. Akhtyrskii · Prepared with Claude · v0.3 · 2026-07-22*
