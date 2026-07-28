@@ -7,7 +7,7 @@ repo (`survey-skills`) so it can be fetched from any new chat or project.
 - **Owner:** Andrei Akhtyrskii, PhD — Measure & Meaning Research (measuremeaning.com)
 - **Repo (source of truth for artifacts):** https://github.com/andreiaktur-a11y/survey-skills
 - **Language:** conversation in Russian; artifacts (skills, templates, code) in English
-- **Last updated:** 2026-07-23
+- **Last updated:** 2026-07-27
 
 ---
 
@@ -75,9 +75,9 @@ differentiator)** → Recommended actions → Limitations → Appendix (instrume
 | **Brand / Market** | ⬜ (awareness, associations, share) | ⬜ | ⬜ | ⬜ |
 
 Module frameworks (item bank + methodological rationale): Employee `module-framework.md` **v0.4** ·
-CX `skills/domain-cx-member-experience/references/module-framework-cx.md` **v0.2**.
+CX `skills/domain-healthcare-cma/references/module-framework-cx.md` **v0.2**.
 
-Repo anchors: `skills/domain-hr-employee/`, `skills/domain-cx-member-experience/`,
+Repo anchors: `skills/domain-hr-employee/`, `skills/domain-healthcare-cma/`,
 `skills/survey-reporting/references/report-structure.md`,
 `skills/domain-legal/references/report-template.md` (pattern for the `{{braces}}` automation).
 
@@ -117,6 +117,10 @@ Repo anchors: `skills/domain-hr-employee/`, `skills/domain-cx-member-experience/
 - **2026-07-23** **`EXIT_TYPE` adopted** (owner's construction, replacing Claude's proposal to demote engagement intent to a descriptive item). Raw intent to stay is two-sided in this programme — disenrollment is frequently the *intended* outcome — so intent alone cannot carry a driver model. Intent **plus a pre-registered reason item** yields four types: Graduating / Disengaging / Constrained continuing / Committed continuing. It is a **profiling outcome, not the driver-model criterion**. Mandatory triangulation: a member claiming independence while scoring bottom-box on care-manager support and reporting unmet needs is a **masked disengagement** — an aggregate analytic category, **never an individual label**. Validated against realised disenrollment from wave 2 (owner).
 - **2026-07-23** **Physical-safety items excluded** from every configuration of the CX instrument; a written disclosure and escalation protocol is required regardless, since removing the item does not remove the event. Mandatory-reporting exposure is a legal question, answered before the first call (owner).
 - **2026-07-23** Census where an agency roster is ≤ ~800 members, stratified probability sample above; planning target ~100 completes per agency, mode and materials identical across both routes (Claude, from owner's caseload figures).
+- **2026-07-27** **Domain folder naming closed.** The CX artifacts live in **`skills/domain-healthcare-cma/`**; `skills/domain-cx-member-experience/` never existed and the references to it in §3 and §7 were stale. The existing folder is retained rather than renamed: `DOMAINS.md` (roster), `AGENTS.md` (country/product routing), the two `cma-*` evals and the skill's own frontmatter `name:` all key on it, and the module is the **healthcare hat**, of which Health Home member experience is the first worked-out vertical rather than the whole of it. Recorded here so the folder name stops being re-litigated (Claude, mechanical; reversible on owner's word — rename cost is 6 files).
+- **2026-07-27** **Domain-module contract established** (read from `DOMAINS.md` + `AGENTS.md`). The domain `SKILL.md` is the **agent-facing routing layer** (the seven contract sections an agent reads before opening anything else); the Report Library artifacts in `references/` are the **delivery artifacts**. They are not alternatives: the skill is **not** superseded, and `module-framework-cx.md` is **normative for the Health Home vertical**. Precedence rule adopted and printed in the skill: *where the two disagree, the framework governs and the skill is corrected*; the skill points at framework sections rather than restating methodology (Claude).
+- **2026-07-27** **`domain-healthcare-cma/SKILL.md` v0.2 and `references/compliance.md` v0.2 reconciled with the framework.** Four contradictions corrected: (1) CAHPS/CG-CAHPS reclassified **tier A → tier B** with the D-CX-9 rules carried into the skill (no "CAHPS" in the deliverable name, verbatim-or-not-at-all, slots not wording, per-item transferability, provenance attribution); (2) QMP monitoring reframed from "good practice / not a written state policy" to the **written HH0003 obligation**, with the caution it was protecting now carried precisely by the §0.1 claim-discipline block rather than by understatement; (3) default mode **voice/phone primary → SMS/mail primary with a fully resourced phone fallback**, achieved mode reported per agency; (4) benchmarks **CAHPS Database → cross-agency within network**, with database submission recorded as a separate owner decision out of scope for v1 (Claude, flag-first; every change proposed with rationale).
+- **2026-07-27** **Incidentals in the same revision:** the named voice vendor removed from the domain module — phone in this vertical is **interviewer-administered**, since §2.3 screening assumes interviewer effects and §8.4.1 assumes a briefed human; vendor/stack choice returns to `survey-fielding`, where it belongs. Construct domain `disenrollment_reason` superseded by **`engagement_intent`** (ENG-01–03 → `EXIT_TYPE`, §9.1), and the construct list extended to match the 12 modules. `compliance.md` promoted from stub to the domain's compliance layer: HH0003 basis, claim discipline, BAA structure, respondent protection, and an evidence crosswalk rewritten against the obligation's actual elements (Claude).
 
 ---
 
@@ -146,6 +150,32 @@ it is edited.
    in a proposal.
 6. Per-agency completes target — ~100 is a methodological planning figure, not a costed one.
 
+**CX (added 2026-07-27, from the skill/framework reconciliation):**
+
+7. **IP tier propagation — the tier A claim on CAHPS survives outside the two reconciled files.**
+   `shared/instrument-library/index.json` and all four instrument banks (CG-CAHPS core, CG-CAHPS
+   coordination of care, ACS demographics, CDC HRQOL-4) carry `reuse_tier: "A"`; `README.md`,
+   `CONTINUE.md` and the `DOMAINS.md` roster row repeat it in prose. The library is otherwise
+   already compatible with verbatim-or-nothing (it stores measure stems and tells the reader to pull
+   field wording from the source). **The edit is mechanical — a tier field, a licence note and three
+   prose lines — but it is six files, so it is proposed as its own short session rather than folded
+   in silently.** Until it is done, `SKILL.md` §3 is the authority on tier, not the library.
+8. **CG-CAHPS retention.** It is the wrong reference for the Health Home vertical (it measures
+   clinician and group *visit* experience, not a member's relationship with a care manager). Keep it
+   in the healthcare module as a general patient-experience source under tier B rules, or retire it
+   from this module?
+9. **Tier legend ambiguity.** The standing legend reads "**A** = own/official". Does "official"
+   cover federal statistical instruments (ACS, NHIS/BRFSS, CDC HRQOL-4)? Proposed reading: **no** —
+   tier A is original synthesis only, and these are tier B. The cost of the safe reading is
+   attribution; the cost of the loose one is that "tier A" stops meaning anything.
+10. `module-framework-cx.md` still carries **"Repo target: `skills/domain-cx-member-experience/…`"**
+    in its header. Metadata-only correction to v0.2.1 — no content touched — or leave until the next
+    content revision?
+11. **Automated voice.** Not a default in this vertical after the §8.4.1 disclosure protocol; if it
+    is ever proposed, the protocol has to be answered first. Confirm the exclusion, or keep it open.
+12. **Naming: "ARA" vs "Measure & Meaning"** across the skill library. The revised CX files use M&M;
+    the other domain skills still say ARA. Library-wide sweep, not a CX decision — flagged, not made.
+
 ## 6. How we work (per-session ritual)
 
 1. Start a **new chat per single task** (one report, or one template) — long threads get
@@ -160,38 +190,49 @@ it is edited.
 
 ## 7. STATUS (latest)
 
-**Session of 2026-07-23 — CX domain opened; module framework v0.2.**
+**Session of 2026-07-27 — CX domain, session 2: domain skill reconciled with the framework.**
 
 - **Done:**
-  - **Regulatory verification closed** (all four items of the session brief), with two corrections
-    to the brief's premises: HH0003 is one programme-wide policy with no recorded revision, and no
-    survey-derived measure enters the redesignation score. A stronger positioning anchor found in
-    its place — the state's SPA measure framework names *Experience of Care* and populates it with
-    none.
-  - **D-CX-3 … D-CX-9 resolved and logged** (§4), including the IP determination on HCBS CAHPS
-    (tier B; verbatim-or-not-at-all; tier B slots rather than tier B wording).
-  - **`EXIT_TYPE`** — owner's construction adopted over Claude's narrower proposal; triangulation
-    against experience composites made mandatory, with masked disengagement fixed as an aggregate
-    category only.
-  - **`module-framework-cx.md` v0.2** produced, target path
-    `skills/domain-cx-member-experience/references/` — 13 sections, 12 modules, claim-discipline
-    block (§0.1), three-layer transfer rule (§12).
-  - **Standing rule added** to §1: regulatory-claim discipline, library-wide.
+  - **Architecture question answered first, as the brief required.** `DOMAINS.md` + `AGENTS.md`
+    establish that a domain `SKILL.md` is the **agent-facing routing layer** and the `references/`
+    artifacts are the **delivery layer**. The skill is therefore **not superseded**: it is corrected
+    and made to point at the framework, with an explicit precedence rule — *framework governs,
+    skill is corrected* — printed at the top of the file. This determined the shape of everything
+    below.
+  - **All four contradictions reconciled** in `domain-healthcare-cma/SKILL.md` **v0.2** and
+    `references/compliance.md` **v0.2**: CAHPS tier A → **tier B** with the full D-CX-9 rule set;
+    QMP "good practice" → the **written HH0003 obligation** plus the §0.1 claim-discipline block;
+    voice-primary → **SMS/mail primary, phone fallback resourced as a full mode**; CAHPS Database
+    → **cross-agency within network**. Both incidentals cleared (voice vendor removed,
+    `disenrollment_reason` → `engagement_intent`/`EXIT_TYPE`).
+  - **`compliance.md` promoted from stub** to the domain's compliance layer, with the two counsel
+    items carried as live flags rather than settled statements, and a scope note that HH0003 is
+    NYS-specific and is not assumed to transfer to another state.
+  - **Path repair complete.** §3 and §7 now name `skills/domain-healthcare-cma/`; the folder-naming
+    decision is recorded in §4 so it stops recurring. No second domain folder created.
+  - **Six new open items registered** in §5 — the largest being that the **tier A claim on CAHPS
+    survives in six other files**, including the four instrument banks the design agent actually
+    reads for wording.
 
-- **⚠ Not committed.** The GitHub connector is **read-only** — a push of this file and of
-  `module-framework-cx.md` v0.2 failed with `403 Resource not accessible by integration`. Both
-  files must be uploaded manually. This is the same limitation previously recorded for the binary
-  sample report, and it is broader than assumed: it applies to text artifacts too. Until a
-  write-capable token is configured, every session ends with manual upload.
+- **Not done, deliberately:** the shared-layer IP tier sweep (§5 item 7). It is mechanical but it is
+  six files outside this session's scope, and flag-first discipline says a correction to `shared/`
+  is proposed, not folded in. Until it lands, `SKILL.md` §3 is the authority on tier for those banks.
 
-- **Next:** `questionnaire-cx-member-experience.md` v0.1 — **in a fresh chat**, and only after the
-  two blockers in §5 clear (driver-model criterion; counsel review of the PHI/BAA structure, which
-  fixes the mode and therefore the instrument's form). Preparatory step that needs neither cleared:
-  assemble the verbatim tier B item texts from the HCBS CAHPS source into a reference file, since
-  §2.5 forbids drafting the instrument from paraphrase or memory.
+- **⚠ Not committed.** The GitHub connector remains **read-only** (`403 Resource not accessible by
+  integration`). `SKILL.md` v0.2, `compliance.md` v0.2 and this ROADMAP require manual upload.
+  A write-capable token remains the single highest-value piece of plumbing: three consecutive
+  sessions have now ended with the repo and the artifacts out of sync, which is exactly the drift
+  this session existed to repair.
+
+- **Next:** the two questionnaire blockers are unchanged (§5 items 1–2), so the natural session 3 is
+  the preparatory step that needs neither cleared: **assemble the verbatim tier B item texts from the
+  HCBS CAHPS source into a reference file**, since §2.5 forbids drafting the instrument from
+  paraphrase or memory. The IP tier sweep (§5 item 7) is a short alternative and would pair naturally
+  with it — the sweep sets the tier field the new reference file will be read against.
 
 - **Also open, unrelated to CX:** the Employee row's "Website *what you receive*" cell in §3 is the
   only unfilled Employee deliverable in Phase 1, and it sets the pattern for the other two domains.
+  Carried: `module-framework.md` §11.1 still lists three flags resolved 2026-07-19.
 
 - **Phase 1-A pipeline backlog** (unchanged, from the 2026-07-22 release): deterministic
   `driver_models` spec (predictor missing-data rule, `WT` usage, exact Shapley procedure incl. R²
@@ -202,7 +243,6 @@ it is edited.
   number reconciliation, predictor count vs. model, suppression leakage, sample-mode language).
   **Trigger: the first real engagement, not a calendar date.**
 
-- **Note for the next session:** open a fresh chat and attach `ROADMAP.md` (this version) plus
-  `module-framework-cx.md` v0.2. `Employee_Engagement_Retention_SAMPLE_v3_2.docx` is also still not
-  in the repo. Consider configuring a write-capable GitHub token so artifacts stop depending on
-  manual upload.
+- **Note for the next session:** open a fresh chat and attach this `ROADMAP.md`,
+  `module-framework-cx.md` v0.2 and `SKILL.md` v0.2. `Employee_Engagement_Retention_SAMPLE_v3_2.docx`
+  is also still not in the repo.
