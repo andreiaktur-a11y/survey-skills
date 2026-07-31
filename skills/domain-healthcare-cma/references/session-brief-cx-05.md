@@ -1,7 +1,7 @@
 # Session brief — CX session 5: questionnaire v0.1
 
 **Repo target:** `skills/domain-healthcare-cma/references/questionnaire-cx-member-experience.md`
-**Prepared:** 2026-07-30 · **Governing artefact:** `module-framework-cx.md` **v0.3** (→ v0.4, see §2)
+**Prepared:** 2026-07-30 · **Revised:** 2026-07-30, preconditions closed · **Governing artefact:** `module-framework-cx.md` **v0.3** (→ v0.4, see §2)
 **Discipline:** one task per session · principal-led · flag-first · scope guards declared below.
 
 ---
@@ -16,21 +16,27 @@ The owner's stated purpose for this session is **to review and edit the question
 
 ---
 
-## 1 · Precondition — what "conversational" means
+## 1 · Register — settled (`D-CX-18`)
 
-**Owner decision, 2026-07-30:** the CMA survey is a **telephone survey in conversational mode.** This supersedes D-CX-5 (SMS/mail primary, phone fallback).
+**Owner decision, 2026-07-30:** the CMA survey is a **telephone interview**, administered in a **mixed register biased to the standard**. `O-CX-18` is closed.
 
-The word *conversational* carries three different methods, and they have different consequences for the tier B set. **One line from the owner settles it.**
+The qualifier *"closer to the standard"* is operationalised as a rule an interviewer can follow, not a disposition:
 
-| Reading | What it means | Consequence |
+| | Tier B — the six verbatim items | Tier A — everything else |
 |---|---|---|
-| **(a) Standardised administration, conversational in tone** | A human interviewer reads items as written, warm delivery, probing only within the source's own rules before coding `UNCLEAR` | **Tier B set survives intact.** This is how the source instrument is administered. Lowest friction |
-| **(b) Mixed register** | Conversational interviewing on tier A items; strictly standardised delivery on the six tier B items | Workable, but the interviewer changes register mid-instrument. That has to be **scripted and trained**, not left to judgment, and it is itself a measurement risk |
-| **(c) Fully conversational throughout** | Interviewer free to rephrase and clarify any item until the respondent understands it | **The tier B set empties.** An item delivered with clarification is not the item as published, so honesty requires converting all six to tier A. Everything gained from verbatim use is given back |
+| First reading | Exactly as published | Exactly as drafted |
+| If the member does not understand | One verbatim re-read · then the source's own probing rules · then `UNCLEAR` | Read the item's **scripted clarification** |
+| Interviewer may rephrase | **Never** | **Never** — clarification comes from the bank, not from judgment |
 
-**Recommended: (a), or (b) if comprehension in this population is judged to require it.**
+**Why this preserves the tier B set.** An item delivered with interviewer rephrasing is not the item as published. Standardised delivery on the six tier B items is therefore not a stylistic preference — it is the condition on which `D-CX-11`'s closed set survives. Fully conversational administration would have emptied it.
 
-**A fourth reading must be ruled out explicitly.** If *conversational mode* meant an **automated conversational voice agent**, that is `O-CX-16` and it collides with two standing positions: §8.4.1 requires a disclosure and escalation protocol that an automated agent cannot execute, and §10.2 sells independent administration as the product. Recommend the exclusion is confirmed rather than left implicit.
+**Three consequences for this session's drafting:**
+
+1. **Every tier A item needs two texts** — the item and one approved clarification. That roughly doubles the drafting work per item and is registered as `O-CX-20`.
+2. **Clarification use is logged per item.** The resulting per-item clarification rate is free comprehension diagnostics and the wave-2 rewrite signal. It is **reported, never adjusted for**: its correlation with respondent characteristics is a finding, not a nuisance.
+3. **The care-manager block runs contiguously** — `CMH-B-00` → `CMH-B-01` → `RAT-B-01` → `RAT-B-02`. This matches the source's own section structure and means the interviewer changes register **between blocks rather than between items**, which is what makes a mixed register trainable at all.
+
+**Automated conversational voice remains excluded** (`O-CX-16`): §8.4.1 requires a disclosure and escalation protocol an automated agent cannot execute, and §10.2 sells independent human administration as the product.
 
 ---
 
@@ -78,25 +84,27 @@ The questionnaire cannot be drafted against a framework whose mode section is wr
 
 ---
 
-## 3 · Precondition — the questionnaire is over budget by roughly double
+## 3 · Configuration and length — settled in direction (`D-CX-19`), with an arithmetic correction
 
-This is the finding most likely to derail the session if it is discovered mid-draft.
+**Owner decision, 2026-07-30:** v0.1 drafts the **QMP evidence-base configuration**; the ceiling is raised modestly; the **criterion layer is never cut**. `O-CX-19` is closed in direction.
 
-**Item bank, v0.3, distinct IDs:** RAT 3 · CMH 5 · COM 4 · ACC 4 · POC 5 · COORD 3 · UNM 5 · GRV 3 · RSP 2 · LNG 3 · SEF 3 · ENG 3 · OPN 3 → **43 closed items plus 3 open-ended**, before need screens.
+⚑ **Correction, and it changes what has to be cut.** The recommendation as put to the owner said "cut `LNG` and `RSP`". **Those two modules are not in the QMP configuration to begin with**, so cutting them frees nothing. The real arithmetic:
 
-**Budget, §1:** 20–26 closed items, ≤ 10 minutes by phone.
+| | Closed items |
+|---|---|
+| QMP configuration (RAT + CMH + COM + ACC + POC + UNM) | 26 |
+| Criterion layer (`SEF` 3 + `ENG` 3) — never cut | +6 |
+| **Total** | **32** against a ceiling of 26 |
 
-The framework already anticipates this: §1 maps **configurations**, not one universal instrument. So the question is not *what gets cut* but **which configuration is being drafted first.** Taking the §1 QMP configuration (RAT + CMH + COM + ACC + POC + UNM + OPN) gives 26 closed items — exactly at the ceiling, and that is **before** the criterion layer, which the driver model requires: `SEF` (3) and `ENG` (3) push it to 32.
+The reduction has to come from **inside** the configuration. Three moves get most of the way:
 
-⚑ **Owner decision required before drafting:**
+- resolve `O-CX-8` by cutting (`ACC-01` or `CMH-B-01`) → 31
+- resolve `O-CX-9` by cutting `POC-02` → 30
+- treat `UNM-OTH` as the open follow-up it already is, not a closed item → **29**
 
-1. **Which configuration is v0.1?** Recommended: the **QMP evidence base** configuration — it is the one the buyer's obligation names, and it exercises every module the other configurations draw from.
-2. **What yields to fit the budget?** Three routes, and they are not equivalent:
-   - **(i) Raise the ceiling.** A well-run conversational phone interview sustains more than 10 minutes with this population. Costs money per complete and raises break-off risk mid-instrument.
-   - **(ii) Cut modules.** `LNG`, `RSP`, `GRV` are the candidates by configuration logic — but `GRV` is described in §8.3 as the module most likely to produce a finding the LHH acts on the same quarter.
-   - **(iii) Cut the criterion layer.** Do not. Without `SEF` and `ENG` there is no driver model and no `EXIT_TYPE`, which is the analytical product.
+**And `D-CX-18` lengthens interviews.** Scripted clarification adds time wherever it fires. A nominal **12-minute** budget should be planned against roughly **15 achieved**, which is at the edge of tolerable for a telephone interview with this population. If the achieved figure in cognitive testing runs past 15, the next cut is a module, and `COM` at four tier A items is the one whose content is entirely ours to re-scope.
 
-   **Recommended: (i) modestly, plus (ii) on `LNG` and `RSP`** — `LNG` is partly recoverable from the roster and from achieved-mode data, and `RSP` at two items is the thinnest module in the set. Flagged, not decided.
+**The exact cut list is settled at drafting. The direction is not reopened.**
 
 ---
 
@@ -109,7 +117,7 @@ The framework already anticipates this: §1 maps **configurations**, not one uni
 
 ## 5 · Scope guards
 
-**In scope:** the v0.4 mode patch (§2.5 list) · the configuration decision (§3) · English draft of every item in the chosen configuration · routing and screen logic · interviewer instructions for the tier B items as the source specifies them · the locked/editable separation (§6).
+**In scope:** the v0.4 patch applying `D-CX-17` and `D-CX-18` (§2.5 list, plus §2.3 and §10.2 for the register rule) · the cut list implementing `D-CX-19` (§3) · English draft of every item in the configuration · **one scripted clarification per tier A item** (`O-CX-20`) · routing and screen logic · interviewer instructions for the tier B items as the source specifies them · the locked/editable separation (§6).
 
 **Out of scope, explicitly:** the codebook (needs `O-CX-6`) · the Spanish version (see §6.4) · the report template · the sample report · fieldwork materials that depend on counsel · `O-CX-13` (shared-layer tier sweep) · anything in the Employee or Brand domains.
 
@@ -135,7 +143,7 @@ Every item is printed in one of two forms, and the difference is unmissable on t
 
 ### 6.2 Every tier A item carries its reasoning
 
-Each editable item is printed as: **ID · construct · proposed wording · scale · routing · one line on what the item is doing and why it is worded that way.**
+Each editable item is printed as: **ID · construct · proposed wording · scripted clarification · scale · routing · one line on what the item is doing and why it is worded that way.**
 
 The last field is the point. An edit pass without it produces wording changes that quietly change constructs — the item still reads well and no longer measures what the index needs.
 
@@ -166,6 +174,7 @@ Tier B items carry the **official Spanish inline and locked** (`D-CX-12`) — th
 - [ ] `questionnaire-cx-member-experience.md` **v0.1** — chosen configuration, both registers, reasoning line on every tier A item
 - [ ] Locked-string check run against `tier-b-source-items.md`, result recorded
 - [ ] Item count against the §1 budget printed in the questionnaire header, with what was cut and why
+- [ ] One scripted clarification present for every tier A item, and none for any tier B item
 - [ ] `ROADMAP.md` STATUS updated and **uploaded**
 - [ ] Open items reconciled: `O-CX-n` list identical in both files
 
