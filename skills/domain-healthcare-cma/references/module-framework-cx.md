@@ -1,8 +1,40 @@
 # Measure & Meaning — CX Domain (Health Home Member Experience)
 
-## Module Framework & Question Bank · v0.3
+## Module Framework & Question Bank · v0.6
 
-**Status:** owner sign-off of 2026-07-30 applied · **Repo target:** `skills/domain-healthcare-cma/references/module-framework-cx.md`
+**Status:** ⏸ **FROZEN at v0.6** (`D-CX-26`) · **Repo target:** `skills/domain-healthcare-cma/references/module-framework-cx.md`
+
+> ⏸ **FREEZE NOTICE.** The CX domain is parked at this version while the Employee domain is finalised. Everything unresolved is a numbered open item in §13.1 with options and a recommendation. **Nothing was closed by assumption to tidy the freeze**, and one rule in §9.1 is explicitly marked provisional rather than settled quietly (`O-CX-25`).
+
+**Changelog v0.6 (supersedes v0.5; documentation & freeze pass, 2026-08-05, CX session 7):**
+
+- **§9.2 rewritten — `D-CX-24`, closing `O-CX-1`. The dual criterion is declined by the owner.** The driver model runs on **one** criterion, `RAT-B-01`. The `SEF` module leaves the criterion layer and the QMP configuration; its three items are held in questionnaire §9's withdrawn annex with their reasoning lines, and their IDs are retired.
+- **The divergence exhibit is withdrawn, not substituted.** It rested on a capacity measure the instrument no longer contains. Rebuilding it from `UNM` would be a different claim wearing the same exhibit's clothes, so §9.2 states its absence instead.
+- **§9.1 — `EXIT_TYPE` *Constrained continuing* runs on a provisional single condition** (`O-CX-25`). Its second defining condition was *bottom-half `SEF`*. A rule is in force so the typology is not left broken during the freeze; **it is marked provisional and needs the owner, not Claude.**
+- **§1 — the `D-CX-19` phrase "criterion layer (`SEF` 3 + `ENG` 3) is never cut" is superseded** and is corrected rather than left standing, on the §13 rule against printing a superseded argument in support of a live conclusion. The criterion layer is now `ENG` 2 plus the locked `RAT-B-01`.
+- **§2.1 — `SC-08` becomes an unused registered format.** Kept in the register, flagged as having no consumer at v0.6.
+- **§13.1 — `D-CX-25` records the *about you* and interviewer blocks** as declared, undrafted slots (questionnaire sections I and J), and **five new open items** (`O-CX-25`…`O-CX-29`) carry the questions raised at the owner's second reading.
+- **Footer version stamp corrected.** It read v0.4 at v0.5 — a stale stamp is exactly how a wrong file gets cited as authoritative, so it is fixed and the fix is recorded rather than done quietly.
+
+**Changelog v0.5 (supersedes v0.4; owner's edit pass, 2026-08-02, CX session 6):**
+
+- **§8.2 rewritten — `D-CX-21`. The `UNM` module is rebuilt** as an 11-domain need checklist plus one uptake-and-outcome item per flagged need (`SC-10`), replacing the four *needed?→got it?* pairs. The pass identified the defect: *did you get the help you needed* collapses an uptake gap, work in progress, and a delivery failure into one `NO`. **`ACC-04` is cut and its content absorbed as `UNM-MED`** (§6). Supersedes `O-CX-24` — the three-option collapse is off the table.
+- **§3 and §9.1 patched — `D-CX-22`. `RAT-01`, `ENG-01` and `ENG-02` are anchored to the agency by name**, not to "the Health Home programme": members recognise the agency and frequently do not recognise *Health Home*. The anchor also repairs a blind spot in `EXIT_TYPE`: under the programme anchor, a member transferring between CMAs answered *staying* and `TRF` could never fire.
+- **§2.1 extended — `O-CX-23` closed.** Three original response formats registered with top-box definitions: confidence (`SEF`), time bands (`ACC-02`), need-uptake outcome (`UNM`, new).
+- **§9.1 — `ENG-03` cut (`D-CX-23`)**; it was never in the derivation rule, and the cost is recorded. `POC-01` cut (§7, closes `O-CX-22`); `OPN-02` cut (§11).
+- **`D-CX-20` — criterion placement confirmed** at interview position 3, closing `O-CX-21`; the unprimed-criterion argument carried.
+- **The six tier B items were untouched by the pass** — byte-verified in questionnaire v0.2 §6.
+
+**Changelog v0.4 (supersedes v0.3; scoped mode patch, 2026-08-02, CX session 5):**
+
+- **§10.2 rewritten — `D-CX-17`. The mode is a telephone interview**, interviewer-administered, superseding `D-CX-5`'s SMS/mail-primary design. Frame coverage is now mode-determined: a member without a working roster number is excluded by the instrument rather than by choice, and that rate prints as a coverage figure on the §8.5 precedent.
+- **§0.1 and §2.5 corrected — the third ground under `D-CX-10` falls away.** The published instrument is interviewer-administered by telephone, so our mode now matches the published mode. **The conclusion is unchanged and the fourth prohibited claim stands**, carried by grounds 1 and 2, which are independent of mode. This is edited rather than left, because a superseded argument printed in support of a correct conclusion invites the whole determination to be reopened by the first reader who notices. **Mode alignment does not restore comparability.**
+- **§2.3 branch priority inverted.** Interviewer effects are now the primary data-quality threat; the self-administered rule set is retained as secondary, for any future configuration, rather than as a co-equal branch.
+- **§2.1 alternates and the `UNCLEAR RESPONSE` code — `O-CX-7` disposed of** (recommendation, ⚑ owner sign-off): the `-3` code is adopted; the source's cognitive-accommodation alternate version is **excluded from v0.1** with the exclusion stated in the provenance appendix, and proxy/assisted completion carries the accommodation route.
+- **§1 length budget re-cut** against `D-CX-19`: the QMP configuration is 29 closed items after the drafting cuts, planned at 12 minutes nominal against ~15 achieved.
+- **§8.5 rewritten as a staffing constraint.** 95% roster coverage by telephone means multilingual **interviewers**, not translated forms.
+- **§6 and §7 — outside the declared patch list, flagged not silent.** `POC-B-02`'s mode caveat is struck (the unprompted probe works as published) and the `O-CX-8` deferral clause "the answer depends on the mode" is now false. Leaving either in place would have printed a superseded argument, which is the defect this patch exists to remove.
+- **§13 — `D-CX-17`, `D-CX-18`, `D-CX-19` recorded**; `O-CX-16` disposed of (exclusion confirmed); `O-CX-20` and `O-CX-21` opened.
 
 **Changelog v0.3 (supersedes v0.2; owner sign-off 2026-07-30, applied from `references/tier-b-source-items.md` v0.1):**
 
@@ -55,7 +87,9 @@ These three statements are **prohibited** in any client-facing document, and are
 - ❌ *"Improves your redesignation score."* Redesignation **Domain 2 (Quality and Process Measures)** carries 20% of the total score (Quality 10%, Process 5%, prior redesignation result 5%) and is computed from **CMART and Medicaid claims/encounters data only**. No survey-derived measure enters the score. A member survey is evidence of QMP compliance and an operational lever on the measures that *are* scored — nothing more.
 - ❌ *"Required by NYSDOH."* The obligation is to obtain and apply member feedback. A survey is one permitted method, not a mandated instrument.
 - ❌ *"Replaces / satisfies the state's CAHPS requirement."* NYSDOH sponsors a biennial CAHPS-based member experience survey for adults enrolled in **Medicaid managed care plans**, used to compare **plans**. Its unit of evaluation is the plan; it says nothing about a Health Home, a CMA, or a care manager. Not to be confused either with the voluntary electronic **CMA survey** the Department sends before a redesignation review, which is about the LHH's oversight of its network and is explicitly excluded from the final score.
-- ❌ *"Comparable to HCBS CAHPS benchmarks."* **(Added 2026-07-30, D-CX-10.)** The source instrument is validated in its entirety and not in parts; a sponsor that adds items beyond the core set and approved supplements cannot submit to the HCBS CAHPS Database; and our mode is not the published mode. Our instrument is a subset plus a substantial tier A block, fielded by SMS, mail and phone. Verbatim wording buys attribution and format familiarity — **it does not buy a benchmark.** The comparison this product offers is cross-agency within the network (§12).
+- ❌ *"Comparable to HCBS CAHPS benchmarks."* **(Added 2026-07-30, D-CX-10; grounds narrowed 2026-08-02, D-CX-17.)** Two grounds, both independent of mode: the source instrument is validated in its entirety and **not in parts**, and a sponsor that adds items beyond the core set and approved supplements **cannot submit to the HCBS CAHPS Database**. Our instrument is a subset plus a substantial tier A block. Verbatim wording buys attribution and format familiarity — **it does not buy a benchmark.** The comparison this product offers is cross-agency within the network (§12).
+
+  ⚑ **A third ground has been struck, and the reason is worth stating.** Until `D-CX-17` this claim was also refused on the ground that our mode was not the published mode. It now is: the published instrument is interviewer-administered by telephone, and so are we. **Mode alignment does not restore comparability** — the two surviving grounds are each sufficient on their own — but the argument is corrected here rather than left standing, because a prohibition defended on a ground a reader can falsify is a prohibition that gets reopened.
 
 **The defensible commercial statement is the narrow one:** the obligation exists, the method is unspecified, and the state's own SPA measure framework names *Experience of Care* as one of three measure categories while populating it with none. ⚑ *`O-CX-3`: the SPA measure table is dated November 2017; confirm no newer published version before this sentence goes into a client-facing document.*
 
@@ -65,13 +99,19 @@ These three statements are **prohibited** in any client-facing document, and are
 
 | Client need (trigger) | Modules | Target length | Primary deliverable focus |
 |---|---|---|---|
-| QMP evidence base / annual member feedback cycle | RAT + CMH + COM + ACC + POC + UNM + OPN | 10–12 min | Documented member feedback applied to QMP, with cross-agency comparison |
-| Cross-CMA performance comparison for the LHH | RAT + CMH + COM + ACC + COORD + SEF | 10–12 min | Where agencies diverge, and on what |
+| QMP evidence base / annual member feedback cycle | RAT + CMH + COM + ACC + POC + UNM + OPN | 12 min nominal / ~15 achieved | Documented member feedback applied to QMP, with cross-agency comparison |
+| Cross-CMA performance comparison for the LHH | RAT + CMH + COM + ACC + COORD | 10–12 min | Where agencies diverge, and on what. ⚑ **`SEF` removed at v0.6** (`D-CX-24`) — the module is withdrawn from the bank, not merely from the QMP configuration, so no configuration may call it without reopening `O-CX-1` |
 | Pre-redesignation readiness | RAT + CMH + POC + GRV + UNM + OPN | 12–14 min | Documented QMP loop; Domain 1 evidence (not Domain 2 score) |
 | Access & equity review | ACC + LNG + UNM + COORD + segmentation from roster | 8–10 min | Coverage and access gaps by language, programme, agency |
 | Post-PIP verification | Modules matching the PIP's root cause + RAT | 6–8 min | Movement against the PIP's stated goals |
 
-**Length budget.** The mode is SMS/mail with phone fallback (D-CX-5), so the budget is tighter than Employee: **20–26 closed items**, ≤ 10 minutes by phone. Segmentation is supplied by the roster, not asked (§9), which buys back 4–6 items relative to a self-administered design.
+**Length budget — re-cut for telephone administration (D-CX-17, D-CX-19).** The mode is a telephone interview throughout, so the constraint is interview duration rather than screen fatigue, and it binds harder in two places the v0.3 budget did not price.
+
+- **Standing budget:** **20–26 closed items** as the general ceiling. Segmentation is supplied by the roster, not asked (§9), which buys back 4–6 items relative to a self-administered design.
+- **The QMP configuration no longer exceeds it.** `D-CX-19` was written when the criterion layer was `SEF` 3 + `ENG` 3 and fixed that it is never cut. **`D-CX-24` removes `SEF`**, so the criterion layer is now `ENG` 2 plus the locked `RAT-B-01`, and the standing rule survives in the form that matters: *the criterion layer is never cut for length*. After the `D-CX-21` rebuild and the session-6 and -7 cuts the fielded configuration is **19 closed bank items, ≈22 administered in the expected case** — **under the 26 ceiling**, which the v0.4 budget did not achieve.
+- ⚑ **The headroom is spoken for.** Questionnaire sections I and J (`D-CX-25`) are declared and undrafted; a standard *about you* block is roughly a dozen items. **`O-CX-27` is the decision about how much of that headroom is spent**, and the answer turns on which characteristics the LHH file already holds under the existing BAA. Nothing here should be read as spare capacity.
+- **`D-CX-18` lengthens the interview independently of item count.** Scripted clarification adds time wherever it fires, and the clarification rate is not known before cognitive testing. A nominal **12-minute** budget is therefore planned against roughly **15 achieved**, which is at the edge of tolerable for this population by telephone.
+- **The next cut is a module, not an item.** If cognitive testing puts the achieved figure past 15 minutes, `COM` — four tier A items whose content is entirely ours to re-scope — is the module that gives way. This is recorded now so the decision is not taken under field pressure.
 
 ---
 
@@ -86,6 +126,18 @@ The instrument follows the response formats used by the **CAHPS Home and Communi
 - **Recommendation items:** 4-point — Definitely no · Probably no · Probably yes · Definitely yes.
 - **Global ratings:** 0–10. *Anchor wording resolved: it is transcribed verbatim in both baseline languages at `tier-b-source-items.md` §3.5 and is pulled from there, never reconstructed from memory. Note that the published anchors run "the worst / best help from {care manager} possible" — they anchor on the help, not on the person (§3, D-CX-14).*
 - **No agreement (Likert) matrices.** The Employee 7-point fully verbalized scale does **not** transfer. Layer 3 is rebuilt, and mixing an agreement matrix into a CAHPS-shaped instrument would produce an instrument that reads as neither.
+
+**Original formats, registered 2026-08-02 (closes `O-CX-23`).** Three formats are ours, not the source's, each with its top-box stated here so the codebook does not invent one:
+
+- **Confidence (`SC-08`):** Not at all confident · A little confident · Somewhat confident · Very confident. **Top-box = Very confident.** ⚑ **No item uses this format at v0.6** — `SEF` was its only consumer (`D-CX-24`). **Retained in the register rather than deleted:** a registered format costs nothing to keep and re-deriving an identical scale later would cost a justification.
+- **Time bands (`SC-09`, `ACC-02`):** Same day · The next day · Two or three days · Longer than three days · Usually did not hear back · Did not leave a message. **Top-box = Same day**; *did not leave a message* is a screen-in-item and is excluded from the denominator; *usually did not hear back* is substantive, never missing.
+- **Need-uptake outcome (`SC-10`, `UNM`, `D-CX-21`):** Yes — and I got the help I needed · Yes — we are still working on it · Yes — but I did not get the help I needed · No — we have not worked on that together. **Top-box = got the help.** *Still working on it* is a separate in-progress rate and is **never counted as unmet**; *not worked on together* is an uptake signal that includes needs the member resolved without the programme, and is **never attributed as care-manager failure**.
+
+**Alternate versions and the `UNCLEAR RESPONSE` code — `O-CX-7`, disposed of 2026-08-02 (⚑ recommendation, owner sign-off required).** `D-CX-17` restores meaning to three source artefacts that a self-administered mode had emptied. They are dispositioned separately, because they do not cost the same:
+
+- **`UNCLEAR RESPONSE` (`-3`) is adopted**, on every item, tier A and tier B alike. It is a missing-data code and not item wording, so adopting it on tier A items is a fielding convention rather than borrowed phrasing. It is also what makes the `D-CX-18` clarification log interpretable: *clarification fired and the answer resolved* and *clarification fired and the answer did not resolve* are different findings, and without the code they collapse into one.
+- **The cognitive-accommodation alternate version is excluded from v0.1.** The source specifies its binary frequency scale and its 5-point rating as a **separate alternate version of the whole survey**, never as a per-item fallback. Our instrument is majority tier A, so an alternate version would have to be *constructed* by us for every tier A item, cognitively tested and translated as a second instrument — and its results are not poolable with the main version without a stated recode. The cost is disproportionate at v0.1.
+- ⚑ **The cost of that exclusion is borne by members, and is disclosed rather than absorbed.** In a population where cognitive limitation is not rare, excluding the accommodation excludes people. The accommodation route in v0.1 is **proxy and assisted completion**, already recorded as a variable (§2.3) and already reported as a rate. If cognitive testing shows a material share of the roster cannot use the 4-point scale, the alternate version returns as a costed line item. The exclusion is stated in the provenance appendix, so a reader comparing our instrument to the published measure set sees a decision rather than an omission.
 
 **Reporting rule, stated once in §Method of every report:** all composites and items are reported as **top-box** (the most positive response option, or the two most positive where the source measure defines it that way), with the exact definition printed per measure. ⚑ *One residual dependency (`O-CX-6`): the source's own top-box definition for the 0–10 global rating is not stated in either uploaded source document, and §2.1 forbids supplying it from memory. Obtain the measure specification before the codebook session. Every other tier B item in the closed set is a single item on a scale whose most positive option is unambiguous, so this is one question, not a blocker.* Means are not reported for these items. A negatively worded item's top box is the response indicating the need *was* met — this is stated at the exhibit, not buried.
 
@@ -110,14 +162,16 @@ Where the LHH's real question is about staff performance, the answer is caseload
 
 Pre-registered in the technical appendix, applied before analysis. The Employee rule set does not transfer unchanged — there are no long matrices to straightline and no shared kiosks.
 
-- **Interviewer-administered (phone):** call-attempt log, interview duration distribution, interviewer-level response-pattern review (an interviewer effect is a real threat when the instrument is short and the scale is 4-point).
-- **Self-administered (SMS/web):** completion under 1/3 of median duration → flag; identical response across an entire module with no variance → flag; combined → exclude.
+**Branch priority, inverted by `D-CX-17`.** The instrument is interviewer-administered throughout, so **interviewer effects are the primary data-quality threat** and the phone rule set is the operative one. The self-administered rules are retained below for any future configuration, not as a co-equal branch.
+
+- **Interviewer-administered (telephone) — primary:** call-attempt log; interview duration distribution **by interviewer**, not only overall; interviewer-level response-pattern review, since an interviewer effect is a real threat when the instrument is short and the scale is 4-point. Two additions from `D-CX-18`: **per-item clarification rate by interviewer** (an interviewer far above the pool mean is a training signal, one far below is a compliance signal), and **`UNCLEAR` rate by interviewer**. Both are monitored during fielding, not discovered in analysis.
+- **Self-administered (SMS/web) — retained, not fielded in this configuration:** completion under 1/3 of median duration → flag; identical response across an entire module with no variance → flag; combined → exclude.
 - **Proxy completion:** recorded as a variable, not silently allowed. Family/caregiver-assisted responses are reported as a rate and available as a breakout, because in this population assistance is common and is not a defect.
 - Every report states: N in frame → N contacted → N completed → N after screening → screening rate, by agency.
 
 ### 2.4 Item ID convention
 
-Stable IDs (`RAT-01`, `CMH-B-03`, `UNM-HOU`) used in the codebook, crosstab workbook, and the `{{braces}}` template. IDs never change meaning between waves; revised wording gets a suffix (`RAT-01b`). A `-B-` segment in the ID marks a **tier B** item (§2.5). **The set of `-B-` IDs is closed** — six items, enumerated in §2.5 — so a `-B-` ID outside that list appearing in the **codebook, questionnaire, crosstab workbook or template** is an error, and the QA layer checks for it. Retired `-B-` IDs (`CMH-B-02`, `CMH-B-03`, `COM-B-01…03`) survive in this framework's prose and in the provenance appendix as a record of decisions taken; they are never re-issued and never attach to a fielded item.
+Stable IDs (`RAT-01`, `CMH-B-03`, `UNM-HOU-N`) used in the codebook, crosstab workbook, and the `{{braces}}` template. IDs never change meaning between waves; revised wording gets a suffix (`RAT-01b`). A `-B-` segment in the ID marks a **tier B** item (§2.5). **The set of `-B-` IDs is closed** — six items, enumerated in §2.5 — so a `-B-` ID outside that list appearing in the **codebook, questionnaire, crosstab workbook or template** is an error, and the QA layer checks for it. Retired `-B-` IDs (`CMH-B-02`, `CMH-B-03`, `COM-B-01…03`) survive in this framework's prose and in the provenance appendix as a record of decisions taken; they are never re-issued and never attach to a fielded item.
 
 ### 2.5 IP determination — HCBS CAHPS (D-CX-9, corrected and closed 2026-07-30)
 
@@ -131,9 +185,11 @@ v0.2 stated that a tier B item used exactly as published "is comparable and attr
 
 1. The instrument is validated **in its entirety plus approved supplemental items, and not in parts.** Adding any question beyond the core set and approved supplements removes the possibility of submitting to the HCBS CAHPS Database.
 2. The trademark condition confirms the same boundary from the other side: an instrument may be called a CAHPS Survey only if the sponsor retains **all 69 core items** without modifying or reordering questions or response options. The naming decision and the subsetting decision are therefore the same decision.
-3. The published instrument is **interviewer-administered**; our mode is SMS/mail primary with phone fallback (D-CX-5). Identical wording in a different mode is not the same measurement — the vendor instructions assume text read aloud, interviewer probing, and an `UNCLEAR RESPONSE` code only an interviewer can assign.
+3. ~~The published instrument is **interviewer-administered**; our mode is SMS/mail primary with phone fallback.~~ **Struck 2026-08-02 (`D-CX-17`).** The mode is now a telephone interview, which *is* the published mode. The ground no longer holds and is removed rather than softened.
 
-Our instrument is a subset plus a substantial tier A block, fielded in a different mode. **It is outside validated use by construction.**
+Our instrument is a subset plus a substantial tier A block. **It is outside validated use by construction** — and it remains so on grounds 1 and 2 alone, neither of which mentions mode.
+
+⚑ **Mode alignment does not restore comparability, and the temptation to read it that way is the reason this paragraph exists.** Matching the published mode removes one *objection* to comparability; it does not supply the thing comparability requires, which is the full core item set administered without additions. The fourth prohibited claim in §0.1 is unchanged. What the mode change genuinely buys is narrower and worth having on its own terms: the source's interviewer instructions, its probing rules, its `UNCLEAR RESPONSE` code and its unprompted probes are now administrable **as published**, so each of the six verbatim items is delivered in the form it was validated in — which is precisely what `D-CX-18`'s standardised tier B rule exists to protect.
 
 > **Corrected rationale of record.** Verbatim use of a tier B item buys **attribution, format familiarity to the buyer, and freedom from the borrowed-paraphrase defect.** It does **not** buy comparability with published HCBS CAHPS results or database benchmarks.
 
@@ -193,13 +249,15 @@ Internal reference files carry **neutral names** — the instrument is named in 
 |---|---|---|
 | RAT-B-01 | **Rating of the help received from the care manager (0–10)** | **B** |
 | RAT-B-02 | Recommendation of the care manager to family and friends (4-point) | **B** |
-| RAT-01 | Overall rating of the Health Home programme as a whole (0–10) | A |
+| RAT-01 | Overall rating of the care management agency, anchored to `{agency name}` (0–10) — **`D-CX-22`** | A |
 
 **`RAT-B-01` measures the help received, not the person — D-CX-14 (owner sign-off 2026-07-30).** v0.2 labelled it "global rating of the care manager." The published item does not say that: its anchors run *the worst / best help from {care manager} possible*, and it asks the member to rate **the help you get**. The label is corrected because §9.2 turns on what the criterion actually measures, and "rating of help received" and "rating of the person" are different constructs.
 
 **The correction cuts in our favour.** §2.2 excludes care-manager-level reporting on the ground that a performance-management instrument for individual staff and a QMP measurement instrument cannot be the same instrument. A criterion that rates *the help received* rather than *the care manager* is the consistent choice for that position — the relabel removes a tension in v0.2 rather than creating one.
 
-`RAT-B-01` is the **primary criterion** for the driver model (§9.2). `RAT-01` separates the care manager from the programme — a distinction the LHH needs and the HCBS instrument does not make, because a member can be well served by a care manager inside a programme that is not delivering, and the LHH's levers differ in the two cases.
+`RAT-B-01` is the **primary criterion** for the driver model (§9.2). `RAT-01` separates the care manager from the **agency** — a distinction the LHH needs and the HCBS instrument does not make, because a member can be well served by a care manager inside an agency that is not delivering, and the LHH's levers differ in the two cases.
+
+**`RAT-01` is agency-anchored — `D-CX-22` (owner's edit pass, 2026-08-02).** v0.1 anchored it to "the Health Home programme"; the pass corrected the referent: members recognise the agency they deal with, and many do not recognise *Health Home* at all — an item rating an entity the member cannot place returns affect, not judgment. The construct shift is recorded, not smoothed over: v0.1 measured the programme, v0.2 measures the agency, and the agency version lands exactly on the cross-agency comparison that is the product. **The cost, stated:** nothing in the instrument now rates the Health Home programme as such; if that construct is wanted, it is a new item, not a refill.
 
 **Caveat disclosed:** global ratings are summary judgments, useful as criteria and as trend metrics, weak as diagnosis. Never reported without the composites that predict them.
 
@@ -266,11 +324,17 @@ Directly aligned with the content areas HH0003 names (timeliness of appointments
 | ACC-01 | The member can reach the care manager when they need to. (frequency) | A |
 | ACC-02 | Time to a response after leaving a message. (banded categories) | A |
 | ACC-03 | Contact happens as often as the member was told it would. (frequency) | A |
-| ACC-04 | Help getting an appointment when one was needed. (Yes/No, with a "did not need one" screen) | A |
+| ACC-04 | Help getting an appointment when one was needed — **cut in the owner's edit pass; content → `UNM-MED` (`D-CX-21`)** | A |
 
 **Screening logic:** `ACC-04` is asked only of members who needed an appointment. A "no experience" state is never recoded as a negative — the Employee rule that no-experience ≠ dissatisfaction carries over intact as a **[BOILERPLATE — DO NOT EDIT]** invariant.
 
-⚑ **`ACC-01` and `CMH-B-01` are the same construct on different scales — `O-CX-8`, resolved at drafting.** `ACC-01` is tier A and 4-point frequency; `CMH-B-01` is tier B, Yes/No, and verbatim. Fielding both is redundant and will read as a repeat to a member on the phone, so **one of them goes.** The trade is real in both directions: keeping `ACC-01` preserves gradation and keeps the ACC module on one scale; keeping `CMH-B-01` preserves the composite's only verbatim item and the shorter cognitive load of a binary. It is deferred rather than decided because the answer depends on the mode (`O-CX-2`) — gradation costs more by phone than by SMS. `ACC-02` (time to response) and `ACC-03` (promised contact frequency) are unaffected either way and are not substitutes for either.
+⚑ **`ACC-01` and `CMH-B-01` are the same construct on different scales — `O-CX-8`, resolved at drafting.** `ACC-01` is tier A and 4-point frequency; `CMH-B-01` is tier B, Yes/No, and verbatim. Fielding both is redundant and will read as a repeat to a member on the phone, so **one of them goes.** The trade is real in both directions: keeping `ACC-01` preserves gradation and keeps the ACC module on one scale; keeping `CMH-B-01` preserves the composite's only verbatim item and the shorter cognitive load of a binary. ~~It is deferred rather than decided because the answer depends on the mode (`O-CX-2`) — gradation costs more by phone than by SMS.~~ **The deferral ground is void (`D-CX-17`): the mode is decided, and it moved the trade in both directions at once.** A live interviewer makes 4-point gradation cheap by telephone, which favours `ACC-01`; but our mode now matches the published mode, which makes verbatim `CMH-B-01` more defensible than it was when the ground was written.
+
+**Resolved at drafting, 2026-08-02 (⚑ recommendation, owner sign-off): keep `CMH-B-01`, cut `ACC-01`.** The decisive argument is that the gradation `ACC-01` buys is not gradation the report ever uses. Reporting is **top-box** (§2.1) and the CMH composite is the mean of item-level top-box rates (§4), so a 4-point item and a binary item both reduce to a proportion before anything is computed with them. Gradation therefore costs cognitive load and interview time and returns nothing at the composite. Against that, `CMH-B-01` is the CMH composite's only verbatim item and it sits behind the published gate, so its denominator is the published denominator.
+
+**The cost, stated:** reachability is now asked only of members who clear `CMH-B-00`, and the `ACC` module loses its lead item. Reversal is one item. `ACC-02` (time to response) and `ACC-03` (promised contact frequency) are unaffected either way and are not substitutes for either.
+
+**`ACC-04` and its screen are cut in the owner's edit pass (`D-CX-21`, 2026-08-02).** The defect the pass named: a member who arranged the appointment without ever asking for help had nowhere clean to land — the screen/item pair scored self-sufficiency as either a non-need or a failure. *Help getting an appointment* is a need like the others, and it moves to the `UNM` checklist as `UNM-MED`, where the uptake stage separates *never raised* from *raised and failed*. **The module fields `ACC-02` and `ACC-03`.** HH0003's *timeliness of appointments* content area is carried by `UNM-MED` together with `ACC-02`/`ACC-03`, and the report's HH0003 crosswalk says so explicitly.
 
 ---
 
@@ -284,15 +348,19 @@ Directly aligned with the content areas HH0003 names (timeliness of appointments
 |---|---|---|
 | POC-B-01 | Whether the plan contained what matters to the member. (4-point) | **B** |
 | POC-B-02 | Who the member would talk to in order to change the plan. (multiple response) | **B** |
-| POC-01 | The member knows what is in their plan of care. (Yes/No) | A |
+| POC-01 | The member knows what is in their plan of care — **cut (owner, closes `O-CX-22`)** | A |
 | POC-02 | The member's own priorities are in the plan. (frequency) | A |
 | POC-03 | The member was offered a real choice between options, not a single option presented. (frequency) | A |
 
 This module is where the person-centred language of the programme becomes measurable, and it is the strongest QMP-facing content in the instrument. Both tier B slots transfer cleanly: the fills carry the Health Home plan-of-care term, and the constructs presuppose nothing about HCBS service receipt.
 
-⚑ **`POC-02` and `POC-B-01` are close enough to require a stated distinction — `O-CX-9`, resolved at drafting.** Do not field both without one. The available distinction is that `POC-B-01` asks how much of what matters is *in* the plan (a coverage judgment, 4-point) while `POC-02` asks whether the member's priorities *get there* (a process judgment, frequency); if that distinction does not survive cognitive testing, `POC-02` goes.
+⚑ **`POC-02` and `POC-B-01` are close enough to require a stated distinction — `O-CX-9`, resolved at drafting.** Do not field both without one. The available distinction is that `POC-B-01` asks how much of what matters is *in* the plan (a coverage judgment, 4-point) while `POC-02` asks whether the member's priorities *get there* (a process judgment, frequency).
 
-⚑ **`POC-B-02` carries a mode caveat (`O-CX-7`).** It is an interviewer-coded multiple-response item whose unprompted "anyone else?" probe *is* part of its design. In SMS or mail it becomes a check-all-that-apply grid, which is a different instrument administering the same words. Not resolvable until the mode is fixed.
+**Resolved at drafting, 2026-08-02 per `D-CX-19` (⚑ recommendation, owner sign-off): `POC-02` is cut.** The distinction is real on paper and will not survive the telephone: two adjacent items about whether the member's priorities are in the plan, one 4-point and one frequency, read to a member as the same question asked twice, and the second answer is contaminated by the first. `POC-03` (a real choice between options, not a single option presented) carries the process side of the module and is not redundant with either. Reversal is one item.
+
+**`POC-01` is cut (owner's edit pass, 2026-08-02, closes `O-CX-22`).** `POC-B-01`'s `DON'T KNOW` rate carries plan knowledge — verbatim, on the published denominator, at zero cost against the budget. The counter-argument (a `DK` on a 4-point content item and an explicit *"no, I don't know what is in my plan"* are different admissions) was put to the owner and declined. The codebook records the `POC-B-01` `DK` rate as the plan-knowledge measure.
+
+**`POC-B-02`'s mode caveat is struck (`D-CX-17`, 2026-08-02).** v0.3 recorded that the item is interviewer-coded multiple response whose unprompted *"anyone else?"* probe *is* part of its design, and that a self-administered check-all-that-apply grid would be a different instrument administering the same words. **The instrument is now interviewer-administered, so the item works as published** — probe included, interviewer-coded, with the open "someone else" capture. The caveat is removed rather than left in place; it was the correct objection to a mode we no longer use.
 
 ---
 
@@ -306,21 +374,25 @@ This module is where the person-centred language of the programme becomes measur
 | COORD-02 | Help connecting to mental health or substance use services when needed. (Yes/No + screen) | A |
 | COORD-03 | Providers involved in the member's care appear to know what the others are doing. (frequency) | A |
 
-### 8.2 UNM — Unmet needs (social determinants)
+### 8.2 UNM — Needs and help (social determinants) · rebuilt in the owner's edit pass (`D-CX-21`)
 
-Yes/No, top-box = need met. Asked with an explicit need screen; a member without the need is not counted as unmet.
+**Decision question:** which needs are present in the population, which of them enter joint work with the care manager, and what happens to the ones that do.
 
-`UNM-HOU` housing · `UNM-TRN` transportation to appointments · `UNM-FOD` food · `UNM-BEN` benefits and entitlements · `UNM-OTH` other unmet need (open follow-up). **All tier A.**
+**The v0.1 structure — four screen/item pairs on *needed? → got it?* — is retired**, on a defect the owner's edit pass identified: *did you get the help you needed* collapses three states an LHH must see separately. A need that never entered joint work is an **uptake gap**, not a delivery failure — the member may never have raised it, or may have resolved it themselves — and coding it unmet indicts the care manager for work they were never party to. A need in active work that has not yet resolved — housing does not resolve inside one 3-month window — is **in progress**, and coding it unmet punishes exactly the agencies doing the slow work. Only a need that was worked and failed is a delivery failure.
 
-**`UNM-TRN` is resolved as the tier A item (owner sign-off 2026-07-30; closes v0.2 §13.1 item 2 and ROADMAP §5 item 3).** The source analogue (Q59) transfers on content — it presupposes nothing about who provides the transport, and it is the one source item in the whole set that measures an unmet need directly. It is declined anyway, on three costs the v0.2 flag did not price:
+**Structure:** an **11-domain need checklist** (`UNM-<DOM>-N`, Yes/No screens read as a battery) → **one uptake-and-outcome item per flagged domain** (`UNM-<DOM>-W`, `SC-10` format, §2.1: worked on together → got the help / still working on it / did not get the help / not worked on together) → the open catch-all `UNM-OTH`.
 
-- it is a **4-point frequency item with no need screen**, so it would sit on a different scale from every other item in this module;
-- the module could then not be reported as a single unmet-need count or index without a recode, and recoding a tier B item is exactly what §2.5 rule 2 forbids;
-- *"never / sometimes"* is not the statement *"the need was unmet"* — a member with no medical appointments in the period still answers.
+**Domains** (owner's list, merged 14 → 11 for the telephone): housing & utilities `HOU` · food `FOD` · benefits & coverage `BEN` · **medical care `MED` — absorbs the cut `ACC-04`** (finding a doctor, getting an appointment) · mental health `MNT` · substance-use treatment `SUB` · medication management `MDM` · transportation `TRN` · legal & justice re-entry `LGL` · work or school `WRK` · social connection `SOC`. The v0.1 IDs (`UNM-HOU`, `UNM-TRN`, `UNM-FOD`, `UNM-BEN`) are superseded pre-field and are not re-used.
 
-The argument for taking the slot was comparability, and after D-CX-10 there is none. Module coherence and a uniform top-box rule are worth more than a format familiarity of one item. **Do not field both.**
+**Reporting rule, per domain:** need prevalence · **uptake gap** (flagged, not worked on together — an outreach and assessment signal, never attributed as care-manager failure; the category includes self-resolved needs, and whether it needs splitting is a named pretest question) · among worked needs: **resolved** (top-box) / **in progress** (separate rate, never counted unmet) / **not resolved**. Network and agency level under §2.2 thresholds; the domain × agency matrix is the module's headline exhibit.
 
-⚑ **`UNM-DME` — proposed, not adopted (`O-CX-12`).** If access to durable medical equipment is wanted as content (see §4), it belongs here as an original tier A item with a need screen, on the module's own Yes/No scale — not as a screened tier B pair inside `CMH`. Owner decision at drafting; it costs one item against the length budget.
+**Invariant, strengthened:** a no-experience state is never recoded as a negative (`[BOILERPLATE — DO NOT EDIT]`), and a no-uptake state is never recoded as a delivery failure.
+
+**Definition consumed by §9.1:** for the *Constrained continuing* type and the masked-disengagement triangulation, **"an unmet need" means outcome `3` — worked on together and the help did not come**. Options `2` (in progress) and `4` (not worked on) are excluded from that definition: the first is not a failure and the second cannot be attributed. Stated here so the `EXIT_TYPE` derivation does not silently change meaning with the module.
+
+⚑ **`UNM-DME` (`O-CX-12`):** under the checklist a durable-medical-equipment entry costs one line, not a pair. Owner's call; register open.
+
+**Historical record, kept for the provenance appendix (`D-CX-11`, 2026-07-30):** the source's Q59 (transportation, 4-point frequency, no need screen) was declined as a tier B slot — it sat on a different scale from the module, could not enter an unmet-need count without a recode of a tier B item, and *never / sometimes* is not the statement *the need was unmet*. Under the rebuilt module the point is moot; the reasoning stands as the record of why the slot was never verbatim.
 
 ### 8.3 GRV — Problems and their resolution
 
@@ -355,7 +427,15 @@ Removing the item does not remove the event. In a phone-administered interview w
 | LNG-02 | An interpreter was available when needed. (Yes/No + screen) | A |
 | LNG-03 | Written materials arrive in a language the member can read. (frequency) | A |
 
-**Fielding rule, not a fixed language list.** The instrument is fielded in English and Spanish as baseline, plus whatever additional languages are needed to cover **95% of the roster**, determined per engagement from the frame. Reference set for this population, following the languages NYSDOH itself uses for Health Home instruments: Spanish, Chinese (simplified and traditional), Haitian Creole, Russian, Korean, French, Italian. Translation is part of the deliverable: forward translation by two independent translators, reconciliation, back-translation, and documented equivalence review. **The share of roster members excluded by instrument language is reported as a coverage figure in the sample section — not as a sentence in limitations.**
+**Fielding rule, not a fixed language list.** The instrument is fielded in English and Spanish as baseline, plus whatever additional languages are needed to cover **95% of the roster**, determined per engagement from the frame. Reference set for this population, following the languages NYSDOH itself uses for Health Home instruments: Spanish, Chinese (simplified and traditional), Haitian Creole, Russian, Korean, French, Italian. Translation is part of the deliverable: forward translation by two independent translators, reconciliation, back-translation, and documented equivalence review (TRAPD applies to **tier A items only** — D-CX-12).
+
+**`D-CX-17` converts the 95% rule from a translation cost into a staffing constraint, and it does not price the same.** A translated form is produced once and fielded at no marginal cost per completion. A telephone interview in a language requires an **interviewer** who conducts it in that language — for every completion, at whatever hour the member answers, with the register discipline of `D-CX-18` and a briefing on the §8.4.1 disclosure protocol. The consequences are operational and are settled before a network is quoted:
+
+- **Interpreter-mediated administration is not equivalent to a same-language interviewer** and is not treated as satisfying the rule. A three-party call changes what a member will say about the person coordinating their care, and it changes it in the direction that matters.
+- **Small-language cells are the binding constraint.** Covering the last few points of a 95% target may mean standing up interviewer capacity for a handful of completes, at a per-complete cost an order of magnitude above the baseline. Where it cannot be resourced, the language is **excluded and the exclusion is printed**, never quietly folded into nonresponse.
+- **`O-CX-5` and the 95% rule now interact.** Both are per-agency cost drivers under a telephone census, and they are re-priced together rather than separately.
+
+**Two coverage figures are printed in the sample section, not in limitations:** the share of roster members excluded by instrument language, and — new under `D-CX-17` — **the share excluded by the absence of a working telephone number on the roster.** The second is the more consequential of the two: members without a reliable number are excluded *by the instrument's mode rather than by their own choice*, they are not randomly distributed across agencies, and they are disproportionately the members whose experience the LHH most needs to see.
 
 ---
 
@@ -371,9 +451,13 @@ Raw intent to stay is unusable here: Health Home care management is designed to 
 
 | ID | Item | Tier |
 |---|---|---|
-| ENG-01 | Expectation of still working with the programme six months from now. (4-point) | A |
+| ENG-01 | Expectation of still working with `{agency name}` six months from now. (4-point, agency-anchored — `D-CX-22`) | A |
 | ENG-02 | If leaving is expected: the main reason. (pre-coded categories, one main + all-that-apply) | A |
-| ENG-03 | If leaving is expected: whether the member expects to get this kind of help somewhere else. (Yes / No / Don't know) | A |
+| ~~ENG-03~~ | ~~Whether equivalent help is expected from another source~~ — **cut in the owner's edit pass (`D-CX-23`)** | A |
+
+**`ENG-01` and `ENG-02` are agency-anchored (`D-CX-22`, owner's edit pass).** Members recognise the agency's name and frequently do not recognise *Health Home* — and the anchor repairs a blind spot in this typology: under the v0.1 programme anchor, a member planning to transfer between CMAs answered *staying*, so `TRF` — the code this section deliberately assigns to Disengaging as a signal about the CMA being left — could never fire. Under the agency anchor, transfers surface. `EXIT_TYPE` remains a programme-level typology; the reason codes separate agency exit from programme exit.
+
+**`ENG-03` is cut (`D-CX-23`, owner's edit pass).** It was never part of the derivation rule below. The cost, recorded: the *leaving into a supported arrangement* vs *leaving into nothing* distinction is now carried more coarsely by the `IND`/`FAM`/`ORG` codes, which name a successor arrangement, against `INEFF`/`CONT`, which name none.
 
 **`ENG-02` pre-coded categories** (fixed before fieldwork, never coded post hoc from open text):
 
@@ -385,46 +469,46 @@ Raw intent to stay is unusable here: Health Home care management is designed to 
 |---|---|---|
 | **Graduating** | Expects to leave · reason ∈ {`IND`, `FAM`, `ORG`} | Programme goal achieved. A *high* rate here is good news, and is the finding claims data cannot produce. |
 | **Disengaging** | Expects to leave · reason ∈ {`INEFF`, `CONT`, `TRF`} | Service failure. The rate, and its concentration by agency, is the headline. |
-| **Constrained continuing** | Expects to stay · bottom-half `SEF` · one or more unmet needs in `UNM` | Continuation without progress toward independence — the member-side analogue of reluctant stayers. |
+| **Constrained continuing** | ⚑ **PROVISIONAL — `O-CX-25`.** Expects to stay · one or more unmet needs in `UNM` (*unmet* = `SC-10` outcome `3` only, §8.2). The second condition, *bottom-half `SEF`*, is gone with the module (`D-CX-24`) | Continuation **with unmet need**. ⚑ **Note what changed:** the type was named for *continuation without progress toward independence*, and the capacity half of that definition no longer exists in the instrument. |
 | **Committed continuing** | Expects to stay · everything else | Neither an alarm nor an achievement. |
+
+⚑ **`O-CX-25`, stated plainly because a provisional rule left unmarked becomes a settled one by attrition.** *Constrained continuing* now identifies members who expect to stay and report at least one need that was worked on and failed. That is a real and reportable group — but it is **not** the group the type was named for, which was members progressing nowhere toward managing their own care. **Three admissible resolutions, owner's choice at thaw:** (a) keep the single condition and **rename** the type to what it now measures, so the label stops promising a capacity reading; (b) **reduce the typology to three** and report unmet need separately, on the ground that a two-condition type with one condition left is a different construct; (c) **reinstate `SEF`**, reopening `O-CX-1`. **Claude's recommendation is (a)** — it keeps a four-type structure the LHH can act on and costs only honesty in the label, whereas (b) discards a live finding and (c) reverses a decision the owner has just taken. **Not applied. The rule in force is the single condition, marked provisional.**
 
 `ELIG` and `HLTH` exits are counted and reported but are **outside the LHH's control**, so they are excluded from the Graduating/Disengaging split rather than assigned to one of them. `TRF` sits with Disengaging deliberately: within a network, a member moving between CMAs is a signal about the CMA being left, and the LHH is precisely the party that can act on it.
 
 **Three cautions, stated in the report, not only here.**
 
 1. **`ENG-02` is self-reported attribution, not ground truth,** and the bias runs in a known direction. In a dependent population interviewed by a stranger, "I can manage on my own" is the socially comfortable answer and "the help was not useful" is not. The reason item will therefore **over-count Graduating and under-count Disengaging** if read at face value.
-2. **Triangulation is mandatory, and it is the analytic product.** A member coded `IND` who also sits in the bottom box on `CMH` and reports unmet needs in `UNM` is a **masked disengagement**, and the rate of that pattern is reported alongside the raw typology. This is where the divergence exhibit is earned — a real disagreement between what members say drives their exit and what their experience scores imply — rather than copied from the Employee template. Masked disengagement is an **aggregate analytic category and never an individual label**; no member is told, and no report says, that a member's stated reason was disbelieved.
+2. **Triangulation is mandatory, and it is the analytic product.** A member coded `IND` who also sits in the bottom box on `CMH` and reports unmet needs in `UNM` is a **masked disengagement**, and the rate of that pattern is reported alongside the raw typology. This is where the **stated-vs-observed divergence** is earned — a real disagreement between what members say drives their exit and what their experience scores imply — rather than copied from the Employee template. ⚑ **Renamed at v0.6 to keep two different things apart.** Through v0.5 both this and the criterion-vs-criterion contrast in §9.2 were called *the divergence exhibit*. §9.2's is withdrawn with `SEF` (`D-CX-24`); **this one survives untouched**, because it runs on `EXIT_TYPE` against the experience composites and never depended on a second criterion. Two exhibits sharing a name, one of them now withdrawn, is precisely how a report ends up claiming a finding it cannot produce. Masked disengagement is an **aggregate analytic category and never an individual label**; no member is told, and no report says, that a member's stated reason was disbelieved.
 3. **Cell sizes.** At the network level the typology is stable. At agency level, the leaving subset is a fraction of completes and the reason split fragments it further, so **`EXIT_TYPE` is reported by agency only where the leaving subset itself clears N ≥ 10** — otherwise agency-level output is limited to the intent item and the type distribution stays at network level.
 
 **Wave-2 validation (recorded now, executed later).** The stated reason is prospective; the administrative record is actual. From wave 2, `EXIT_TYPE` is validated against realised disenrollment for the same members, which converts the typology from an attitude into a calibrated predictor and is the point at which it becomes genuinely defensible. ⚑ *`O-CX-4`: confirm with the LHH which disenrollment fields it actually holds and at what granularity before this is promised in a proposal.*
 
-**Position in the model.** `EXIT_TYPE` is a **profiling outcome, not the driver-model criterion**: composites are compared across types descriptively and, where cell sizes permit, by multinomial model. The driver model keeps the two criteria in §9.2. Reason: a four-category outcome with an unequal and partly uncontrollable base does not support a ranked list of levers, which is what the driver section exists to produce.
+**Position in the model.** `EXIT_TYPE` is a **profiling outcome, not the driver-model criterion**: composites are compared across types descriptively and, where cell sizes permit, by multinomial model. The driver model keeps **the single criterion** in §9.2 (`D-CX-24`). Reason: a four-category outcome with an unequal and partly uncontrollable base does not support a ranked list of levers, which is what the driver section exists to produce.
 
-### 9.2 Dual criterion, pre-registered
+### 9.2 Single criterion, pre-registered (`D-CX-24`, owner, 2026-08-05 — closes `O-CX-1`)
 
-- **Primary criterion:** `RAT-B-01`, **rating of the help received from the care manager** (0–10). Two grounds, and v0.2 carried a third that has been removed: it is buyer-legible, and it is the conventional criterion for CAHPS-shaped driver analysis (composites → global rating). **v0.2 also claimed it was "comparable to the national database". That claim is false and is struck (D-CX-10, §2.5, §0.1).** The two surviving grounds are sufficient; the criterion does not depend on the deleted one.
-- **Secondary criterion:** `SEF` index below — perceived capacity to manage one's own care and navigate services. Aligned with the programme's own stated goal, and non-redundant with the rating of the help received.
+- **Criterion:** `RAT-B-01`, **rating of the help received from the care manager** (0–10). Two grounds: it is buyer-legible, and it is the conventional criterion for CAHPS-shaped driver analysis (composites → global rating). **v0.2 carried a third — comparability with the national database. That claim is false and was struck (`D-CX-10`, §2.5, §0.1).** The two surviving grounds are sufficient; the criterion never depended on the deleted one.
+- **There is no secondary criterion.** The `SEF` index — perceived capacity to manage one's own care — was the candidate through v0.5 and is **declined**. The three drafted items are held with their reasoning lines in questionnaire §9's withdrawn annex; their IDs are retired and never re-issued.
 
-**Construct note, and it bears on the sign-off.** `RAT-B-01` rates *the help received*, not the care manager as a person (§3, D-CX-14). This is the reading that makes the dual criterion coherent: the primary criterion asks how well the service worked, the secondary asks what the member can now do, and neither is a judgment of an individual employee — which is what §2.2 requires of every measure in this instrument.
+**Construct note, unchanged and still load-bearing.** `RAT-B-01` rates *the help received*, not the care manager as a person (§3, `D-CX-14`). That reading is what keeps the criterion consistent with §2.2's exclusion of care-manager-level reporting: an instrument whose criterion rated the *person* would be a performance-management instrument for individual staff, which this one refuses to be. **With one criterion instead of two this note matters more, not less** — it is now the only thing standing between the driver model and a staff-rating reading of it.
 
-| ID | Item (module SEF) | Tier |
-|---|---|---|
-| SEF-01 | Confidence in knowing who to contact when a health problem comes up. (4-point) | A |
-| SEF-02 | Confidence in managing appointments and medications day to day. (4-point) | A |
-| SEF-03 | Confidence in getting help without waiting for the care manager to initiate it. (4-point) | A |
+**What the withdrawal costs, recorded in full rather than absorbed.**
+
+1. **The divergence exhibit is withdrawn, not substituted.** It was the case where members rate the help highly while reporting low capacity to act independently — the finding claims data cannot produce, and the one place the analysis was genuinely non-obvious. **No proxy replaces it.** `UNM` measures unmet need, not capacity, and an exhibit built on `UNM` while carrying the old exhibit's framing would be a different claim in the same clothes. **Absence is stated; padding is not.**
+2. **`EXIT_TYPE`'s *Constrained continuing* loses its capacity condition** — §9.1, `O-CX-25`, provisional rule in force.
+3. **The programme's own stated goal is no longer measured from the member's side.** Health Home care management exists to move members toward managing their own care; after `D-CX-24` the instrument measures **how well the help worked**, not **what the member can now do**. ⚑ **This is the argument to put back to the owner if `SEF` is ever reconsidered** — it is not an argument against the decision, which was the owner's to make, but it is the thing that was given up, and it should be given up knowingly rather than forgotten.
+
+**What it buys:** three items, roughly a minute of interview, a criterion layer that no longer rests on an open question, and a driver section that is simpler to specify and to read.
 
 **Analysis standard.**
 
-1. Bivariate first: composite top-box rates against each criterion, client-readable.
+1. Bivariate first: composite top-box rates against the criterion, client-readable.
 2. Then relative importance: dominance analysis or Shapley decomposition over the pre-registered predictor set, because composites are intercorrelated and raw associations over-credit redundant ones.
 3. **Significance ≠ importance.** At census scale nearly everything reaches significance; the report ranks by effect size and shows stated-vs-derived comparison where a stated-importance item exists. Full matrices live in the appendix with a multiple-comparison note.
-4. **Divergence between the two criteria is the analytical product** — the case where members rate a care manager highly while reporting low capacity to act independently is exactly the finding an LHH cannot get from claims data. It is reported as an exhibit plus prose, **never as a second ranked list**. If the two orderings do not diverge materially, the exhibit is omitted rather than padded.
+4. **The comparison that carries the analytical weight is now cross-agency, not cross-criterion.** With one criterion, what an LHH cannot get elsewhere is **where agencies diverge on the same drivers** — which is also the standing comparison frame (§2.2, no external benchmark database). The report leans on that contrast rather than reconstructing a second-criterion exhibit it no longer has the measurement to support.
 
-**Structural caveat carried from Employee:** if an engagement has no criterion worth modelling, the driver section is **absent, not padded for symmetry**. The skeleton yields to the methodology, never the reverse.
-
-⚑ **`O-CX-1` — owner sign-off required on §9 as a whole.** This is the substantive methodological choice of the domain, and it **blocks the questionnaire**. The two objections that stood against it in v0.2 are now answered: the criterion's label is correct (D-CX-14) and its false comparability ground is struck (D-CX-10). What remains open is the choice itself.
-
----
+**Structural caveat carried from Employee:** if an engagement has no criterion worth modelling, the driver section is **absent, not padded for symmetry**. The skeleton yields to the methodology, never the reverse. **`D-CX-24` is the first live application of that caveat in this domain** — a criterion was removed and the exhibit that depended on it was removed with it, rather than rebuilt from whatever was left.
 
 ## 10 · Frame, weighting, and administration
 
@@ -449,20 +533,28 @@ Segmentation is **supplied by the frame, not asked of the member.** The LHH hold
 
 **Weighting standard:** rim (raking) weighting to the **Health Home or agency enrolled population** on agency × programme × age × sex × race, conditional on frame quality. Nonresponse is analysed against roster attributes and printed as a table, not asserted as acceptable. Weight trimming bounds are disclosed in the codebook.
 
-### 10.2 Administration (D-CX-5)
+### 10.2 Administration (D-CX-17, superseding D-CX-5; register per D-CX-18)
 
 **Independent administration is the product, not a methodological nicety.** The instrument evaluates the care manager, and the care manager cannot be the channel through which it reaches the member.
 
-- **Mode:** SMS and mail primary, **phone fallback**.
-- **The phone fallback is not a minor mode.** Members with unstable housing, no reliable mobile, or low literacy fall through SMS and mail first — and they are not randomly distributed across agencies. Phone capacity is resourced multilingually from the outset, and the mode achieved is reported per agency, because a network where one agency's members answered by phone and another's by SMS has a comparability problem that must be visible.
+- **Mode: a telephone interview, interviewer-administered, throughout.** This supersedes `D-CX-5`'s SMS/mail-primary design. Mail and SMS survive only as **contact and appointment-setting channels** — an advance letter, a scheduling text — never as a route by which the instrument itself is completed. There is no self-administered branch in this configuration.
+- **Why the change is not a downgrade to a fallback.** The population is one where unstable housing, no reliable mobile data, low literacy and limited English are common and are **not randomly distributed across agencies**. A self-administered primary mode systematically under-samples exactly the members whose experience the LHH most needs to see, and reports the result as a response-rate footnote. A single interviewer-administered mode removes that differential at the cost of money rather than of validity.
+- **It also aligns us with the published mode of the tier B items** (§2.5) — a genuine methodological gain, and one that is carefully **not** allowed to become a comparability claim (§0.1, fourth prohibited claim).
+- **Register — `D-CX-18`, mixed and biased to the standard.** Tier B items are **fully standardised**: read exactly as published, one verbatim re-read on request, then the source's own probing rules, then `UNCLEAR`. The interviewer never rephrases a tier B item — that discipline is the condition on which the six verbatim slots survive as published items. Tier A items get a standardised first reading and, only on the respondent's signal, **one pre-scripted clarification from the instrument's own bank**; clarification is never improvised. **The care-manager block (`CMH-B-00` → `CMH-B-01` → `RAT-B-01` → `RAT-B-02`) runs contiguously**, so the interviewer changes register between blocks rather than between items, which is what makes a mixed register trainable at all.
+- **Clarification use is logged per item**, and the resulting rate is **reported, never adjusted for**: its correlation with respondent characteristics is a finding about comprehension, not a nuisance parameter (§2.3).
+- **Automated conversational voice is excluded** (`O-CX-16`, confirmed 2026-08-02). §8.4.1 requires a disclosure and escalation protocol an automated agent cannot execute, and independent **human** administration is what §10.2 sells. Recorded as a decision so it is not revisited as a cost saving.
+- **Interviewer capacity is multilingual from the outset**, not procured on discovering a need (§8.5). Interviewer identity is recorded on every completion, and interviewer-level quality monitoring runs during fielding (§2.3).
+- **Frame coverage is now mode-determined.** A member without a working telephone number on the roster is excluded by the instrument, not by choice. That rate is printed as a coverage figure in the sample section, on the §8.5 precedent — not buried in limitations. Roster telephone quality is checked before fielding is quoted, because it determines what the achieved sample can represent.
 - **Contact list:** held by the LHH and disclosed to M&M under a BAA (§10.3). CMAs neither hold nor see the outbound list.
-- **What the member is told,** in the invitation and at the start of the phone interview: who is asking, that the care manager will not see individual answers, that results are reported in group form only, and that participation does not affect services or eligibility. This text is fixed and is reproduced in the report's provenance appendix.
+- **What the member is told,** in the advance contact and at the start of the interview: who is asking, that the care manager will not see individual answers, that results are reported in group form only, and that participation does not affect services or eligibility. This text is fixed and is reproduced in the report's provenance appendix. ⚑ *It is drafted as a stub pending `O-CX-2` (counsel) — see §13.*
 
 ### 10.3 PHI (D-CX-8 — decided (a), with a correction)
 
 Owner decision: **M&M receives the contact data and administers directly.**
 
-⚑ **Correction to the framing.** This cannot be structured as a HIPAA *limited data set*: an LDS excludes telephone numbers, email addresses, and street addresses — precisely the fields required to field by SMS, mail, and phone. The correct structure is a **disclosure of PHI to a business associate for health care operations** (quality assessment and improvement activities), under a signed BAA, with:
+⚑ **Correction to the framing.** This cannot be structured as a HIPAA *limited data set*: an LDS excludes telephone numbers, email addresses, and street addresses — precisely the fields required to reach a member by telephone and by advance letter.
+
+⚑ **`D-CX-17` narrows the field list, and the narrowing is in our favour with counsel.** Under a telephone-led design the minimum-necessary contact set is a **telephone number plus a mailing address for the advance letter**; email is no longer required and is not requested. A shorter field list is easier to justify under the minimum-necessary standard, and it is the version put to counsel under `O-CX-2`. *(§10.3 sits outside this patch's declared section list; the note is added rather than the section rewritten, and it is flagged in the session STATUS.)* The correct structure is a **disclosure of PHI to a business associate for health care operations** (quality assessment and improvement activities), under a signed BAA, with:
 
 - **minimum necessary** applied to the field list — contact fields and nothing else beyond the weighting attributes;
 - **contact fields physically segregated** from the analysis file, joined only by study ID;
@@ -505,33 +597,60 @@ Owner decision: **M&M receives the contact data and administers directly.**
 
 | ID | Open item | ROADMAP §5 | State |
 |---|---|---|---|
-| `O-CX-1` | **§9.2 dual criterion** — primary `RAT-B-01`, secondary `SEF`. `EXIT_TYPE` (§9.1) is settled; this is not. | 1 | **Blocks the questionnaire.** Both v0.2 objections cleared 2026-07-30 |
-| `O-CX-2` | **Counsel review** of the §10.3 BAA structure and the §8.4.1 mandatory-reporting question | 2 | **Blocks the questionnaire** — mode determines the instrument's form |
+| `O-CX-1` | ~~§9.2 dual criterion~~ | 1 | ✅ **Closed 2026-08-05 → `D-CX-24`** — **declined by the owner.** Single criterion; `SEF` withdrawn from the bank; divergence exhibit withdrawn, not substituted. Asked across sessions 5, 6 and 7 |
+| `O-CX-2` | **Counsel review** of the §10.3 BAA structure and the §8.4.1 mandatory-reporting question. ⚑ **Re-surfaced 2026-08-05** — the owner could not locate it, because there is nothing to locate: no counsel document exists and questionnaire §3 is five headings with no prose. ⚑ **Now entangled with `O-CX-26`**, which would expand the PHI field list `D-CX-17` narrowed | 2 | **Blocks member-facing text only.** The v0.3 state ("blocks the questionnaire — mode determines the instrument's form") was written when the PHI route drove the mode; `D-CX-17` sets the mode independently. ⚑ Owner: does §10.3's *"no instrument text before counsel"* bind the item bank, or only the introduction, consent and disclosure language? Recommended: **only the latter** — those are drafted as stubs, item wording proceeds |
 | `O-CX-3` | **SPA measure table currency** — confirm no version newer than November 2017 before the "Experience of Care is empty" sentence is used with a client | 4 | Open |
 | `O-CX-4` | **LHH disenrollment fields** and granularity, before wave-2 `EXIT_TYPE` validation is offered in a proposal | 5 | Open |
 | `O-CX-5` | **Per-agency completes target.** Now a **design** question, not a budget one: what is reported at which level, and at what n (§2.2) | 6 | Open |
 | `O-CX-6` | **Top-box definition for the 0–10 global rating** as the source defines it. Not stated in either uploaded source document; §2.1 forbids supplying it from memory | — | Open, narrow. Needed before the codebook session |
-| `O-CX-7` | **Alternate scales and mode artefacts.** The source's cognitive-accommodation alternates are a separate version of the whole survey; `UNCLEAR RESPONSE` and the "anyone else?" probe have no self-administered meaning (§7) | — | **Blocked by `O-CX-2`** |
-| `O-CX-8` | **`ACC-01` × `CMH-B-01`** — same construct, different scales. One goes (§6) | — | At questionnaire drafting |
-| `O-CX-9` | **`POC-02` × `POC-B-01`** — stated distinction required, or `POC-02` goes (§7) | — | At questionnaire drafting |
-| `O-CX-10` | **`COM-02…04` wording** — tier A originals, written without reaching for the source's staff battery (§5) | — | At questionnaire drafting |
-| `O-CX-11` | **`CMH-03` wording and its need screen** — tier A original replacing Q52+Q53 (§4) | — | At questionnaire drafting |
-| `O-CX-12` | **`UNM-DME`** — adopt an equipment-access unmet-need item, or leave the content out (§4, §8.2) | — | At questionnaire drafting |
+| `O-CX-7` | ~~Alternate scales and mode artefacts~~ | — | **Disposed of 2026-08-02 (§2.1), ⚑ owner sign-off.** `UNCLEAR RESPONSE` adopted on every item; the cognitive-accommodation alternate version **excluded from v0.1** with the exclusion printed in the provenance appendix and proxy/assisted completion as the accommodation route; `POC-B-02`'s probe works as published (§7) |
+| `O-CX-8` | **`ACC-01` × `CMH-B-01`** — same construct, different scales. One goes (§6) | — | **Resolved at drafting 2026-08-02, ⚑ owner sign-off: keep `CMH-B-01`, cut `ACC-01`.** Top-box reporting reduces both to a proportion, so gradation buys nothing at the composite. Reversal cost: one item |
+| `O-CX-9` | **`POC-02` × `POC-B-01`** — stated distinction required, or `POC-02` goes (§7) | — | **Resolved at drafting 2026-08-02 per `D-CX-19`, ⚑ owner sign-off: `POC-02` cut.** The distinction does not survive adjacency by telephone. Reversal cost: one item |
+| `O-CX-10` | ~~`COM-02…04` wording~~ | — | ✅ **Closed 2026-08-02 by the owner's edit pass** — reviewed without comment; wording stands as drafted |
+| `O-CX-11` | ~~`CMH-03` wording and its need screen~~ | — | ✅ **Closed 2026-08-02 by the owner's edit pass** — reviewed without comment |
+| `O-CX-12` | **`UNM-DME`** — adopt an equipment-access entry, or leave the content out (§8.2) | — | Open. ⚑ Under the `D-CX-21` checklist the entry costs **one line, not a pair** — the length ground has weakened; owner's call |
 | `O-CX-13` | **IP tier propagation.** `shared/instrument-library/index.json` and four instrument banks still carry `reuse_tier: "A"` on CAHPS-derived material | 7 | Open — mechanical, six files, its own session |
 | `O-CX-14` | **CG-CAHPS retention** in the healthcare module, or retirement from it | 8 | Open |
 | `O-CX-15` | **Tier legend.** Does "own/**official**" cover federal statistical instruments? Proposed reading: no — tier A is original synthesis only | 9 | Open. §2.5 already applies the narrow reading to this instrument |
-| `O-CX-16` | **Automated voice** — confirm exclusion, or keep open | 11 | Open |
+| `O-CX-16` | ~~Automated voice~~ | 11 | **Disposed of 2026-08-02: exclusion confirmed** (§10.2). §8.4.1 requires a disclosure and escalation protocol an automated agent cannot execute, and independent human administration is what the product sells |
+| `O-CX-20` | **Clarification bank** — one approved alternative phrasing per tier A item (`D-CX-18`). **Drafted 2026-08-02**; cognitive testing and per-item use-rate reporting still to come | — | ⚑ Open until cognitive testing |
+| `O-CX-21` | ~~Criterion placement~~ | — | ✅ **Closed 2026-08-02 → `D-CX-20`** — the criterion stays at interview position 3 |
 | `O-CX-17` | **"ARA" vs "Measure & Meaning"** across the skill library | 12 | Open — library-wide, not a CX decision |
+| `O-CX-22` | ~~`POC-01` candidate cut~~ | — | ✅ **Closed 2026-08-02 — cut by the owner** in the edit pass, without waiting for cognitive testing. The `DK`-vs-explicit-no counter-argument was put and declined (§7) |
+| `O-CX-23` | ~~Unregistered response formats~~ | — | ✅ **Closed 2026-08-02** — `SC-08`, `SC-09` and the new `SC-10` registered in §2.1 with top-box definitions |
+| `O-CX-24` | ~~`UNM` length option~~ | — | ✅ **Closed 2026-08-02 — superseded by `D-CX-21`.** The rebuild takes the saving by the checklist route without inverting polarity |
+| `O-CX-25` | **`EXIT_TYPE` *Constrained continuing* after the `SEF` withdrawal** (§9.1). A single-condition rule is **in force and marked provisional** so the typology is not broken during the freeze | — | ⚑ **New 2026-08-05.** Three resolutions offered at §9.1; Claude recommends **(a) rename the type to what it now measures**. Owner's call — the label promises a capacity reading the instrument no longer supports |
+| `O-CX-26` | **How the member is told who we mean** — programme term vs. role description vs. the care manager's own name. Proposed sequence rule at questionnaire §2.6, **not adopted** | — | ⚑ **New 2026-08-05, owner-raised.** Touches A1's measurement value (naming before the gate destroys it), adds `CM_NAME_RECOG`, and **expands the sample-file PHI fields beyond `D-CX-17`'s minimum-necessary list** — so it should be decided **before** the `O-CX-2` counsel package is assembled, not after |
+| `O-CX-27` | **Scope of the *about you* and interviewer blocks** (questionnaire sections I and J, `D-CX-25`) | — | ⚑ **New 2026-08-05, owner-raised.** **Not *whether* but *which*:** which characteristics are asked of the member versus taken from the LHH file under the existing BAA (§10.3); and whether the source's interviewer block **replaces** or **supplements** §2.3's fielding metadata — not both. Blocked on a verbatim extraction into `tier-b-source-items.md` v0.3. ⚑ Interacts with §2.2: every added breakdown is a suppression risk at agency level |
+| `O-CX-28` | **A1 `YES` with no contact in 3 months** — no back-out screen | — | ⚑ **New 2026-08-05, owner-raised.** Recommendation: **keep it that way.** `Never` is substantive, and a screen would move the most important members on the roster behind a skip |
+| `O-CX-29` | **A2 has no *did not need to make contact* option** and is locked | — | ⚑ **New 2026-08-05, owner-raised.** Recommendation: non-substantive code `-7`, excluded from the `CMH` denominator, reported as a rate. **Changes a composite denominator — settle before the codebook** |
 
 **Closed 2026-07-30 and not carried forward:** v0.2 §13.1 item 2 / ROADMAP §5 item 3 (`UNM-TRN` → tier A, §8.2) · ROADMAP §5 item 10 (header repo path) · the seven flags raised in `tier-b-source-items.md` v0.1 §9, all of which are recorded as decisions below or as `O-CX-6` / `O-CX-7`.
 
+**Closed and not carried forward, recorded here so the two files' `O-CX-n` lists reconcile:** `O-CX-18` (*what "conversational" means*) → **`D-CX-18`**, 2026-07-30 · `O-CX-19` (*configuration and length budget for questionnaire v0.1*) → **`D-CX-19`**, 2026-07-30. Both were opened and closed between framework versions, so they never appeared in this table; they appear as closed rows in ROADMAP §5. IDs are never reused.
+
 ### 13.2 Resolved (decisions log)
+
+**`D-CX-20` · 2026-08-02 · Criterion placement: `RAT-B-01` stays at interview position 3** (closes `O-CX-21`). Owner's call in the edit pass. The unprimed-criterion argument carried: eight content questions followed by a global rating is the classic route to an R² that reflects questionnaire order rather than experience. The cost — a member who has not been walked through the content rates on general affect — is accepted, recorded, and watched in the pretest.
+
+**`D-CX-21` · 2026-08-02 · `UNM` rebuilt: need checklist + uptake-and-outcome follow-up; `ACC-04` absorbed as `UNM-MED`** (supersedes `O-CX-24`; §8.2 rewritten, §6 patched, `SC-10` registered). Owner's edit pass identified the construct defect — *did you get the help you needed* collapses uptake gap, work in progress, and delivery failure into one `NO` — and approved the four-option design: got the help / still working on it / did not get the help / not worked on together. Three consequences are load-bearing: *in progress* is never counted unmet; *not worked on together* is never attributed as care-manager failure and includes self-resolved needs (splitting it is a named pretest question); for §9.1, *unmet* means outcome `3` only. Domains merged 14 → 11 for the telephone; timeframe stays 3 months, made workable by the in-progress option rather than by a longer window.
+
+**`D-CX-22` · 2026-08-02 · Agency referent: `RAT-01`, `ENG-01`, `ENG-02` anchored to `{agency name}`** (§3, §9.1; the `{Health Home programme}` fill retired). Owner's edit pass: members know the agency they deal with and frequently do not know the term *Health Home*; an item rating an entity the member cannot place returns affect. The construct shift on `RAT-01` (programme → agency) is recorded, and its cost stated: nothing now rates the Health Home programme as such. Collateral repair: under the programme anchor a CMA-to-CMA transfer answered *staying* and `TRF` never fired; under the agency anchor transfers surface, and the reason codes separate agency exit from programme exit.
+
+**`D-CX-24` · 2026-08-05 · Dual criterion declined; `SEF` withdrawn** (closes `O-CX-1`). Owner, at the second reading of the questionnaire. The driver model runs on `RAT-B-01` alone. The three `SEF` items are held with their reasoning lines in questionnaire §9's withdrawn annex and their IDs retired; `SC-08` stays registered with no consumer. **Consequences applied in v0.6 rather than left to be discovered:** §9.2 rewritten as a single criterion with the divergence exhibit **withdrawn, not substituted**; §9.1's *Constrained continuing* reduced to a **provisional** single condition (`O-CX-25`); §1's *criterion layer = `SEF` 3 + `ENG` 3* superseded and corrected; §1's configuration map no longer offers `SEF`. **What was given up is recorded at §9.2 point 3**, so a future reconsideration starts from the argument rather than from scratch.
+
+**`D-CX-25` · 2026-08-05 · *About you* and interviewer blocks adopted in principle, declared as undrafted slots.** Owner. Questionnaire sections I and J carry requirements, preconditions and the scope question — and **no item text**, because the verbatim strings are not in `tier-b-source-items.md` and §2.5's verbatim-or-nothing rule makes writing look-alike demographic items the precise defect the two-register apparatus exists to prevent. Extraction into `tier-b-source-items.md` v0.3 is a session of its own; the scope decision is `O-CX-27`.
+
+**`D-CX-26` · 2026-08-05 · CX domain frozen at framework v0.6 / questionnaire v0.3.** Owner, to finalise the Employee domain first. The freeze is a stopping rule, not an abandonment: the state to resume from is the questionnaire file, the decision list is §13.1, and the thaw preconditions are in `session-brief-cx-07.md`. **No open item was closed by assumption in order to tidy the freeze.**
+
+**`D-CX-23` · 2026-08-02 · Edit-pass cuts: `ENG-03`, `OPN-02`** (with `POC-01` cut separately, closing `O-CX-22`). `ENG-03` was never in the `EXIT_TYPE` derivation rule; the *leaving into support* vs *leaving into nothing* distinction is now carried more coarsely by the `IND`/`FAM`/`ORG` codes. `OPN-02` (*what is working well*) leaves section H on the improvement question alone. Each cut is one item to reverse.
+
 
 - **2026-07-23** Positioning: CX domain built as the Health Home member-experience vertical; buyer = Lead Health Home (owner).
 - **2026-07-23** Three-layer transfer rule adopted (§12) (owner).
 - **2026-07-23** **D-CX-3** Reporting convention = HCBS CAHPS response formats, top-box reporting, no agreement matrices (owner).
 - **2026-07-23** **D-CX-4** Weighting frame = Health Home / agency enrolled population, rim weighting on agency × programme × age × sex × race, conditional on frame quality (owner).
-- **2026-07-23** **D-CX-5** Mode = SMS/mail primary, phone fallback; independent administration; contact list held by LHH, not CMA (owner).
+- **2026-07-23** **D-CX-5** ~~Mode = SMS/mail primary, phone fallback~~ — **superseded by `D-CX-17`, 2026-07-30.** What survives from it and is *not* superseded: **independent administration**, and the contact list held by the LHH and never by the CMA (owner).
 - **2026-07-23** **D-CX-6** Reporting units = network and agency; N < 5 suppression with complement check; N ≥ 10 for within-agency subgroups; **care-manager-level reporting excluded by policy** (owner + Claude). *(v0.2 printed this as "excluded pending confirmation of item 13.1.2" — a stale cross-reference to what was then the `UNM-TRN` flag. The exclusion was never conditional on it; corrected 2026-07-30.)*
 - **2026-07-23** **D-CX-7** Language rule = EN + ES baseline plus coverage to 95% of roster; back-translation documented; language-exclusion rate printed as a coverage figure (owner).
 - **2026-07-23** **D-CX-8** PHI route (a): M&M receives contact data under BAA and administers directly — structured as a health-care-operations disclosure, not a limited data set (owner, with correction).
@@ -550,6 +669,14 @@ Owner decision: **M&M receives the contact data and administers directly.**
 - **2026-07-30** **D-CX-15** **`CMH-B-00` adopted** (source Q48) as the gate for the whole care-manager block, reported as a standalone rate and excluded from the composite. Without it five denominators change (owner).
 - **2026-07-30** **D-CX-16** **Reference-layer file naming**: internal reference files carry neutral names; the instrument is named in full inside the file, not in the filename (owner).
 
+- **2026-07-30** **D-CX-17** **Mode changed to telephone, interviewer-administered; supersedes D-CX-5.** Mail and SMS survive as contact and appointment-setting channels only; there is no self-administered branch. Consequences applied in v0.4: one of D-CX-10's three grounds falls away and is struck (§0.1, §2.5), with the conclusion carried unchanged by the two mode-independent grounds; `O-CX-7` unblocked and disposed of (§2.1); `POC-B-02`'s mode caveat struck (§7); the four bright-line conversions do **not** reopen, each having failed on content or structure rather than on mode; `O-CX-5` becomes acute, a telephone census being the most expensive design in the set; frame coverage becomes mode-determined and prints as a coverage figure (§8.5); D-CX-7 becomes a **staffing** constraint (§8.5); interviewer effects become the primary data-quality threat (§2.3) (owner).
+- **2026-07-30** **D-CX-18** **Administration register: mixed, biased to the standard.** Tier B items fully standardised with no exception — read as published, one verbatim re-read, then the source's probing rules, then `UNCLEAR`; the interviewer never rephrases a tier B item, which is the condition on which the closed set of six survives as published items. Tier A items get a standardised first reading plus **one pre-scripted clarification** from the instrument's own bank, never improvised. Clarification use is logged per item and **reported, never adjusted for**. The care-manager block runs contiguously so register changes fall between blocks, not between items (owner + Claude).
+- **2026-07-30** **D-CX-19** **Questionnaire v0.1 configuration = QMP evidence base**, ceiling raised modestly, **criterion layer never cut**. The reduction comes from inside the configuration, not from modules that were never in it; 26 closed items before the criterion layer, 32 with it, 29 after the three drafting cuts. Nominal 12 minutes planned against ~15 achieved (owner, with Claude's correction to the arithmetic).
+- **2026-08-02** **`O-CX-7` disposed of** (§2.1, ⚑ recommendation pending owner sign-off): `UNCLEAR RESPONSE` adopted on every item as a fielding convention; the cognitive-accommodation alternate **version** excluded from v0.1 on disproportionate cost, with the exclusion printed in the provenance appendix and proxy/assisted completion carrying the accommodation route (Claude, flagged).
+- **2026-08-02** **`O-CX-16` disposed of: automated conversational voice excluded**, on the §8.4.1 disclosure-protocol requirement and on independent human administration being the product (§10.2) (Claude, flagged).
+- **2026-08-02** **`O-CX-8` and `O-CX-9` resolved at drafting** (⚑ recommendations pending owner sign-off): `ACC-01` cut in favour of verbatim `CMH-B-01`, on the ground that top-box reporting reduces both to a proportion so gradation buys nothing at the composite; `POC-02` cut, on the ground that the coverage/process distinction does not survive adjacency by telephone. Reversal cost is one item each (Claude, flagged).
+- **2026-08-02** **`O-CX-21` opened:** the gate requirement and the contiguity rule together place the primary criterion at position 3, before the composites that predict it. Recorded as an owner decision rather than absorbed into the draft (Claude).
+
 ---
 
-*Document owner: A. Akhtyrskii · Measure & Meaning Research · Prepared with Claude · v0.3 · 2026-07-30 · illustrative + synthetic · tier B source items reproduced verbatim from a publicly distributed CMS instrument, attributed in the provenance appendix, instrument name excluded from all deliverable titles.*
+*Document owner: A. Akhtyrskii · Measure & Meaning Research · Prepared with Claude · v0.6 · 2026-08-05 · ⏸ frozen · illustrative + synthetic · tier B source items reproduced verbatim from a publicly distributed CMS instrument, attributed in the provenance appendix, instrument name excluded from all deliverable titles.*
