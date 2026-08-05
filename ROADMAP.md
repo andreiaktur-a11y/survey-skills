@@ -7,7 +7,7 @@ repo (`survey-skills`) so it can be fetched from any new chat or project.
 - **Owner:** Andrei Akhtyrskii, PhD — Measure & Meaning Research (measuremeaning.com)
 - **Repo (source of truth for artifacts):** https://github.com/andreiaktur-a11y/survey-skills
 - **Language:** conversation in Russian; artifacts (skills, templates, code) in English
-- **Last updated:** 2026-07-30
+- **Last updated:** 2026-08-02
 
 ---
 
@@ -71,11 +71,11 @@ differentiator)** → Recommended actions → Limitations → Appendix (instrume
 | Domain | Sample report (.docx) | Instrument (questionnaire + codebook) | Automation template in repo | Website "what you receive" |
 |---|---|---|---|---|
 | **Employee / HR** | ✅ **v3.2** (`Employee_Engagement_Retention_SAMPLE_v3_2.docx`) — 17 pp, 11 figures incl. STAY_TYPE 2×2 and STY-02 divergence exhibit, three-model driver section, per-column screening funnel | ✅ **v0.3** — `questionnaire-employee-census.md` + `codebook-employee-census.md` / `.csv` (incl. `spec_driver_models` / `spec_predictors` machine-readable model spec) | ✅ **v1.2** — `report-template-employee-census.md` (D1–D8/F1–F2 release; `{{n_predictors}}` computed; Block X conditional §4.6) | ⬜ |
-| **CX / Member Experience (Health Home)** — vertical: NYS Medicaid Health Home care management · **buyer = Lead Health Home (LHH)**, not the CMA | ⬜ | 🟡 module framework **v0.3** (`module-framework-cx.md`, owner sign-off applied) + tier B source reference **v0.2** (`tier-b-source-items.md`, verbatim EN/ES); questionnaire v0.1 unblocked (`D-CX-17`/`D-CX-18`/`D-CX-19`), codebook still needs `O-CX-6` | ⬜ | ⬜ |
+| **CX / Member Experience (Health Home)** — vertical: NYS Medicaid Health Home care management · **buyer = Lead Health Home (LHH)**, not the CMA | ⬜ | 🟡 module framework **v0.5** (`module-framework-cx.md`, owner's edit pass applied: `D-CX-20…23`) + tier B source reference **v0.2** (`tier-b-source-items.md`, verbatim EN/ES) + **questionnaire v0.2** (`questionnaire-cx-member-experience.md`, `UNM` rebuilt as checklist + `SC-10`, agency referent, 22 closed bank items / ≈38 expected-path questions, locked strings 70/70 byte-verified); codebook still needs `O-CX-6`, `SEF` still provisional (`O-CX-1`) | ⬜ | ⬜ |
 | **Brand / Market** | ⬜ (awareness, associations, share) | ⬜ | ⬜ | ⬜ |
 
 Module frameworks (item bank + methodological rationale): Employee `module-framework.md` **v0.4** ·
-CX `skills/domain-healthcare-cma/references/module-framework-cx.md` **v0.3**.
+CX `skills/domain-healthcare-cma/references/module-framework-cx.md` **v0.5**.
 
 Repo anchors: `skills/domain-hr-employee/`, `skills/domain-healthcare-cma/`,
 `skills/survey-reporting/references/report-structure.md`,
@@ -130,6 +130,22 @@ Repo anchors: `skills/domain-hr-employee/`, `skills/domain-healthcare-cma/`,
 - **2026-07-30** **D-CX-17 — mode changed to telephone, conversational mode; supersedes D-CX-5.** The CMA member survey is administered as a **telephone interview**, conversational. ⚑ *"Conversational" carries three distinct methods; the choice among them is `O-CX-18` and it is not cosmetic.* Consequences recorded now: **(a)** one of D-CX-10's three grounds **falls away** — the published instrument is interviewer-administered by telephone, so our mode now matches it. The conclusion survives untouched on grounds 1 and 2 (validated only in its entirety; database submission requires the full core set with no additions) and the fourth prohibited claim stands — but `module-framework-cx.md` §2.5 and §0.1 must be edited so they stop printing a superseded argument in support of a correct conclusion. **(b)** `O-CX-7` unblocked and `POC-B-02`'s mode caveat removed: the source's alternate version, its `UNCLEAR RESPONSE` code and its unprompted "anyone else?" probe are meaningful again. **(c)** **None of the four bright-line conversions reopens** — `CMH-B-02`, `CMH-B-03`, `UNM-TRN` and `COM-B-01…03` each failed on content or structure, not on mode. **(d)** `O-CX-5` becomes acute: a telephone census is the most expensive design in the set. **(e)** **Frame coverage is now mode-determined** — a member without a working roster number is excluded by the instrument rather than by choice, and that rate is printed as a coverage figure on the §8.5 language precedent. **(f)** D-CX-7 becomes a **staffing** constraint: 95% coverage by phone means multilingual interviewers, not translated forms (owner).
 - **2026-07-30** **D-CX-18 — administration register: mixed, biased to standard.** Reading (b) of `O-CX-18`, with the owner's qualifier *"closer to the standard"* operationalised so it is a rule an interviewer can follow rather than a disposition. **Tier B items: fully standardised, no exception** — read exactly as published, one verbatim re-read on request, then the source's own probing rules, then `UNCLEAR`. The interviewer never rephrases a tier B item, which is what keeps the six verbatim slots delivered as published. **Tier A items: standardised first reading, clarification only on the respondent's signal, and only from a pre-scripted clarification bank** — one approved alternative phrasing per item, written and tested at drafting, printed in the instrument. Clarification is never improvised. Consequences: every tier A item now carries **two texts**, which is added drafting work; **use of a clarification is logged per item**, giving a per-item clarification rate that is free comprehension diagnostics and a wave-2 rewrite signal; the rate is **reported, never adjusted for**, since its correlation with respondent characteristics is a finding rather than a nuisance. Design note: the care-manager block (`CMH-B-00` → `CMH-B-01` → `RAT-B-01` → `RAT-B-02`) is administered **contiguously**, which matches the source's own section structure and means the interviewer changes register between blocks rather than between items (owner + Claude).
 - **2026-07-30** **D-CX-19 — questionnaire v0.1 configuration.** The QMP evidence-base configuration is drafted first; the ceiling is raised modestly from 10 minutes; the **criterion layer is never cut**. ⚑ **Correction carried into drafting:** the recommendation as put to the owner said "cut `LNG` and `RSP`", but those two modules are **not in the QMP configuration to begin with**, so cutting them frees nothing. The configuration is 26 closed items *before* `SEF` + `ENG`, which brings it to **32 against a ceiling of 26**. The reduction therefore has to come from inside the configuration — resolving `O-CX-8` and `O-CX-9` in the direction of cutting, and treating `UNM-OTH` as an open follow-up rather than a closed item, lands it near 29. **And `D-CX-18` lengthens interviews**, so a nominal 12-minute budget should be planned against roughly 15 achieved, which is at the edge of tolerable for a phone interview with this population. The exact cut list is settled at drafting; the direction is not reopened (owner, with Claude's correction to the arithmetic).
+- **2026-08-02** **D-CX-20 — criterion placement confirmed** (closes `O-CX-21`). `RAT-B-01` stays at interview position 3: an unprimed criterion is not inflated by consistency motive, and eight content questions before a global rating is the classic route to an R² reflecting questionnaire order. Cost (rating on general affect) accepted and watched in the pretest (owner).
+- **2026-08-02** **D-CX-21 — `UNM` rebuilt; `ACC-04` absorbed as `UNM-MED`** (supersedes `O-CX-24`; framework §8.2 rewritten; `SC-10` registered). *Did you get the help you needed* collapses uptake gap, work-in-progress and delivery failure into one `NO`. New structure: 11-domain need checklist → per-flagged-need `SC-10` item (got the help / still working on it / did not get the help / not worked on together). *In progress* never counted unmet; *not worked on together* never attributed as care-manager failure (includes self-resolved; split is a pretest question); for `EXIT_TYPE`, *unmet* = outcome 3 only. Domains merged 14→11; 3-month window kept, made workable by the in-progress option (owner, edit pass).
+- **2026-08-02** **D-CX-22 — agency referent.** `RAT-01`, `ENG-01`, `ENG-02` anchored to `{agency name}`; the `{Health Home programme}` fill retired. Members know the agency, frequently not the term *Health Home*. Construct shift on `RAT-01` (programme → agency) recorded with its cost: nothing now rates the Health Home programme as such. Collateral repair: `TRF` becomes reachable — under the programme anchor a CMA-to-CMA transfer read as *staying* (owner, edit pass).
+- **2026-08-02** **D-CX-23 — edit-pass cuts:** `ENG-03` (never in the `EXIT_TYPE` derivation; support-vs-nothing distinction now carried coarsely by `IND`/`FAM`/`ORG`), `OPN-02` (section H runs on the improvement question alone). `POC-01` cut separately, closing `O-CX-22` — the `DK`-vs-explicit-no counter-argument was put and declined (owner, edit pass).
+
+- **2026-08-02** **CX session 5 — framework v0.4 patch and questionnaire v0.1.** `D-CX-17` and `D-CX-18` applied as a scoped patch across §0.1, §1, §2.1, §2.3, §2.5, §8.5, §10.2, §13, plus §6, §7 and §10.3 outside the declared list — each flagged, none silent. The struck ground under `D-CX-10` matters more than it looks: our mode now **is** the published mode, so the third ground for refusing a comparability claim is false and is removed, while the conclusion stands unchanged on grounds 1 and 2. **Mode alignment does not restore comparability** and the fourth prohibited claim is untouched.
+- **2026-08-02** **`O-CX-7` disposed of** (⚑ sign-off): `UNCLEAR RESPONSE` adopted on every item as a fielding convention — it is what makes the `D-CX-18` clarification log interpretable, since *clarified and resolved* and *clarified and not resolved* are different findings. The source's cognitive-accommodation **alternate version** is excluded from v0.1 on disproportionate cost (it would have to be constructed, tested and translated as a second instrument, our own being majority tier A), with **proxy and assisted completion as the accommodation route** and the exclusion printed in the provenance appendix (Claude, flagged).
+- **2026-08-02** **`O-CX-16` disposed of: automated conversational voice excluded** — §8.4.1 requires a disclosure protocol an automated agent cannot execute, and independent human administration is what §10.2 sells (Claude, flagged).
+- **2026-08-02** **`O-CX-8` and `O-CX-9` resolved at drafting** (⚑ sign-off). `ACC-01` cut in favour of verbatim `CMH-B-01`: reporting is top-box and the CMH composite is the mean of item-level top-box rates, so a 4-point item and a binary both reduce to a proportion — the gradation `ACC-01` buys is gradation the report never uses. `POC-02` cut: its coverage/process distinction against `POC-B-01` is real on paper and does not survive adjacency by telephone. Reversal cost one item each (Claude, flagged).
+- **2026-08-02** **`O-CX-21` opened — criterion placement.** `CMH-B-00` gates every care-manager-referenced item and `D-CX-18` requires the four-item tier B block to run contiguously; together they put the **primary criterion at question 3**, before the composites that predict it, earlier than the source places it and earlier than driver-analysis convention. Argument runs both ways (an unprimed criterion is not inflated by consistency motive; a member not walked through the content rates on general affect). Drafted as `D-CX-18` specifies and put to the owner rather than absorbed (Claude).
+- **2026-08-02** **Three further items raised by drafting, none resolved:** `POC-01` proposed as a **candidate cut** (`POC-B-01`'s `DON'T KNOW` rate already measures plan knowledge, verbatim and free — but a `DK` and an explicit "no, I don't know what is in my plan" are not the same admission); **`SC-08` and `SC-09`** — a confidence scale for `SEF` and time bands for `ACC-02` — are response formats framework §2.1 does not yet register; and the `UNM` screen/item pairs could collapse to single three-option questions, **saving 4 questions**, which is the largest single length saving available but inverts the module's polarity and is a framework change (Claude, flagged).
+- **2026-08-02** **`O-CX-12` recommended not adopted** for v0.1 on length alone — the configuration is already 29 against a ceiling of 26. Register kept open (Claude).
+- **2026-08-05** **`D-CX-24` — dual criterion declined, closing `O-CX-1`** (owner, at the second reading). The driver model runs on **one** criterion, `RAT-B-01`. `SEF-01…03` are withdrawn from the instrument and from the module bank, held with their reasoning lines in questionnaire §9's annex, IDs retired. **Three consequences applied rather than left to surface later:** framework §9.2 rewritten as a single criterion; **the divergence exhibit withdrawn, not substituted** — no proxy is built from `UNM`, because that would be a different claim in the same exhibit's clothes; and `EXIT_TYPE`'s *Constrained continuing* reduced to a **provisional** single condition (`O-CX-25`), marked as provisional rather than settled quietly. What the instrument gives up — the member-side measure of the programme's own stated goal — is recorded at framework §9.2 so a future reconsideration starts from the argument (Claude, applying an owner decision).
+- **2026-08-05** **`D-CX-25` — *about you* and interviewer blocks adopted in principle, declared as undrafted slots** (owner). Questionnaire sections I and J carry requirements, preconditions and the scope question and **no item text**: the verbatim strings are not in `tier-b-source-items.md`, and under verbatim-or-nothing writing demographic items that look published is the exact defect the two-register apparatus exists to prevent. Extraction from the source page images into `tier-b-source-items.md` v0.3 is a session of its own; the scope decision is `O-CX-27`.
+- **2026-08-05** **`D-CX-26` — CX frozen at questionnaire v0.3 / framework v0.6** (owner), to finalise the Employee domain first. A stopping rule, not an abandonment: five questions raised at the owner's second reading are written down as `O-CX-25`…`O-CX-29` with options and a recommendation each, so the thaw session opens on a decision list rather than a re-reading. **No open item was closed by assumption in order to tidy the freeze.**
+- **2026-08-05** ⚑ **Reading-copy defect recorded** (Claude, self-correction). The Russian reading copy of questionnaire v0.2 renders **A2** as a four-point frequency item about how often the care manager helped when asked. **A2 is a locked Yes/No item about whether the member could make contact.** The reading copy is a retelling rather than a translation and it drifted on a locked item — the one place drift is least acceptable. **The working file was correct throughout and is unaffected.** Rule adopted: the reading copy is **generated from the working file, never hand-written**, and is regenerated mechanically at thaw.
 
 - **2026-07-27** **Domain-module contract established** (read from `DOMAINS.md` + `AGENTS.md`). The domain `SKILL.md` is the **agent-facing routing layer** (the seven contract sections an agent reads before opening anything else); the Report Library artifacts in `references/` are the **delivery artifacts**. They are not alternatives: the skill is **not** superseded, and `module-framework-cx.md` is **normative for the Health Home vertical**. Precedence rule adopted and printed in the skill: *where the two disagree, the framework governs and the skill is corrected*; the skill points at framework sections rather than restating methodology (Claude).
 - **2026-07-27** **`domain-healthcare-cma/SKILL.md` v0.2 and `references/compliance.md` v0.2 reconciled with the framework.** Four contradictions corrected: (1) CAHPS/CG-CAHPS reclassified **tier A → tier B** with the D-CX-9 rules carried into the skill (no "CAHPS" in the deliverable name, verbatim-or-not-at-all, slots not wording, per-item transferability, provenance attribution); (2) QMP monitoring reframed from "good practice / not a written state policy" to the **written HH0003 obligation**, with the caution it was protecting now carried precisely by the §0.1 claim-discipline block rather than by understatement; (3) default mode **voice/phone primary → SMS/mail primary with a fully resourced phone fallback**, achieved mode reported per agency; (4) benchmarks **CAHPS Database → cross-agency within network**, with database submission recorded as a separate owner decision out of scope for v1 (Claude, flag-first; every change proposed with rationale).
@@ -153,26 +169,35 @@ diverged between the two files; these IDs are authoritative and are never reused
 
 | ID | Open item | State |
 |---|---|---|
-| `O-CX-1` | **§9.2 dual criterion** — primary `RAT-B-01` (rating of the help received from the care manager), secondary `SEF`. `EXIT_TYPE` is settled; this is not. | **Blocks the questionnaire.** Both standing objections cleared 2026-07-30 (label corrected, false comparability ground struck) |
-| `O-CX-2` | **Counsel review** of the §10.3 BAA structure and the §8.4.1 mandatory-reporting question | **Blocks member-facing text.** Mode no longer depends on it (D-CX-17). ⚑ Owner: does "no instrument text before counsel" bind the item bank, or only the introduction, consent and disclosure language? Recommended: only the latter |
+| `O-CX-1` | ~~§9.2 dual criterion~~ | ✅ **Closed 2026-08-05 → `D-CX-24` — declined by the owner.** Single criterion; `SEF` withdrawn from bank and instrument; divergence exhibit withdrawn, not substituted. Asked across sessions 5, 6 and 7 |
+| `O-CX-2` | **Counsel review** of the §10.3 BAA structure and the §8.4.1 mandatory-reporting question | **Blocks member-facing text.** ⚑ Owner: does "no instrument text before counsel" bind the item bank, or only the introduction, consent and disclosure language? Recommended: only the latter — **and questionnaire v0.1 was drafted on that reading**, with all member-facing text held as stubs at §3. If the reading is wrong, §3 is the only part affected. ⚑ **`D-CX-17` also narrows the minimum-necessary field list** to telephone number + mailing address (no email), which is the version to put to counsel |
 | `O-CX-3` | **SPA measure table currency** — confirm no version newer than November 2017 before the "Experience of Care is empty" sentence is used with a client | Open |
 | `O-CX-4` | **LHH disenrollment fields** and granularity, before wave-2 `EXIT_TYPE` validation is promised in a proposal | Open |
 | `O-CX-5` | **Per-agency completes target.** Now a **design** question, not a budget one — the source developer's own field test puts the care-manager composite at an effective sample size of 376 against a recommended target of 400, so at ~100 completes that composite is not reliably reportable at agency level, which is the level the LHH wants it at. What is reported at which level, and at what n? | Open — answer before fieldwork is quoted |
 | `O-CX-6` | **Top-box definition for the 0–10 global rating** as the source defines it. Not stated in either uploaded source document, and §2.1 forbids supplying it from memory | Open, narrow — needed before the codebook session |
-| `O-CX-7` | **Alternate scales and mode artefacts** — the source's cognitive-accommodation alternate is a separate version of the whole survey, not a per-item fallback | **Unblocked by D-CX-17.** Decide in session 5: carry the alternate as the source specifies, or exclude it and state the exclusion |
-| `O-CX-8` | **`ACC-01` × `CMH-B-01`** — same construct, different scales; one goes | At questionnaire drafting |
-| `O-CX-9` | **`POC-02` × `POC-B-01`** — stated distinction required, or `POC-02` goes | At questionnaire drafting |
-| `O-CX-10` | **`COM-02…04` wording** — tier A originals, written without reaching for the source's staff battery | At questionnaire drafting |
-| `O-CX-11` | **`CMH-03` wording and its need screen** — tier A original replacing the dropped Q52+Q53 pair | At questionnaire drafting |
-| `O-CX-12` | **`UNM-DME`** — adopt an equipment-access unmet-need item as tier A in `UNM`, or leave the content out | At questionnaire drafting |
+| `O-CX-7` | ~~Alternate scales and mode artefacts~~ | ⚑ **Disposed of 2026-08-02, sign-off required.** `UNCLEAR RESPONSE` adopted on every item; alternate **version** excluded from v0.1, proxy/assisted completion as the accommodation route, exclusion printed in the provenance appendix |
+| `O-CX-8` | **`ACC-01` × `CMH-B-01`** | ⚑ **Resolved at drafting 2026-08-02, sign-off required: `ACC-01` cut.** Reversal cost 1 item |
+| `O-CX-9` | **`POC-02` × `POC-B-01`** | ⚑ **Resolved at drafting 2026-08-02, sign-off required: `POC-02` cut.** Reversal cost 1 item |
+| `O-CX-10` | ~~`COM-02…04` wording~~ | ✅ **Closed 2026-08-02 by the edit pass** — reviewed without comment |
+| `O-CX-11` | ~~`CMH-03` wording and its need screen~~ | ✅ **Closed 2026-08-02 by the edit pass** — reviewed without comment |
+| `O-CX-12` | **`UNM-DME`** | Open — under the `D-CX-21` checklist the entry costs one line, not a pair; the length ground has weakened. Owner's call |
 | `O-CX-13` | **IP tier propagation.** `shared/instrument-library/index.json` and all four instrument banks still carry `reuse_tier: "A"` on CAHPS-derived material; `README.md`, `CONTINUE.md` and the `DOMAINS.md` roster row repeat it in prose. Mechanical but six files — its own short session. Until it lands, `SKILL.md` §3 is the authority on tier, not the library | Open |
 | `O-CX-14` | **CG-CAHPS retention** — keep in the healthcare module as a general patient-experience source under tier B rules, or retire it from this module | Open |
 | `O-CX-15` | **Tier legend.** Does "own/**official**" cover federal statistical instruments (ACS, NHIS/BRFSS, CDC HRQOL-4)? Proposed reading: **no** — tier A is original synthesis only. `module-framework-cx.md` §2.5 already applies the narrow reading to HCBS CAHPS | Open — library-wide |
-| `O-CX-16` | **Automated voice** — confirm the exclusion, or keep it open | Open |
+| `O-CX-16` | ~~Automated voice~~ | **Disposed of 2026-08-02: exclusion confirmed** |
 | `O-CX-17` | **"ARA" vs "Measure & Meaning"** across the skill library | Open — library-wide sweep, not a CX decision |
 | `O-CX-18` | ~~What "conversational" means~~ | **Closed 2026-07-30 → `D-CX-18`** (mixed register, biased to standard; scripted clarification bank) |
 | `O-CX-19` | ~~Configuration and length budget for questionnaire v0.1~~ | **Closed 2026-07-30 → `D-CX-19`** (QMP configuration; criterion layer intact; cut list settled at drafting) |
-| `O-CX-20` | **Clarification bank** — one approved alternative phrasing per tier A item, from `D-CX-18`. Written and cognitively tested at drafting; declared in the codebook; its per-item use rate carried into the report as a coverage statistic | At questionnaire drafting |
+| `O-CX-20` | **Clarification bank** — one approved alternative phrasing per tier A item (`D-CX-18`) | **Drafted 2026-08-02**: 29 clarifications, one per tier A closed item and screen, zero on the six locked items. ⚑ Open until cognitive testing; per-item use rate carried into the report as a coverage statistic |
+| `O-CX-21` | ~~Criterion placement~~ | ✅ **Closed 2026-08-02 → `D-CX-20`** — stays at question 3 |
+| `O-CX-22` | ~~`POC-01` candidate cut~~ | ✅ **Closed 2026-08-02 — cut by the owner** in the edit pass; counter-argument put and declined |
+| `O-CX-23` | ~~Unregistered response formats~~ | ✅ **Closed 2026-08-02** — `SC-08`/`SC-09`/`SC-10` registered in framework §2.1 (v0.5) with top-box definitions |
+| `O-CX-24` | ~~`UNM` length option~~ | ✅ **Closed 2026-08-02 — superseded by `D-CX-21`** (checklist route takes the saving without the polarity inversion) |
+| `O-CX-25` | **`EXIT_TYPE` *Constrained continuing* after the `SEF` withdrawal.** Its second condition was *bottom-half `SEF`*; a single-condition rule is **in force and marked provisional** so the typology is not left broken during the freeze | ⚑ **New 2026-08-05.** Three resolutions at framework §9.1; Claude recommends **(a) rename the type to what it now measures** — the label currently promises a capacity reading the instrument no longer supports. Owner's call |
+| `O-CX-26` | **How the member is told who we mean** — programme term vs. role description vs. the care manager's own name. Owner-raised: members often know a person's name and not a job title or an agency | ⚑ **New 2026-08-05.** Proposed sequence rule at questionnaire §2.6, **not adopted**. Naming the person **before** the A1 gate destroys the item's finding; the rule offers the name only after the `NO` is recorded, as a separate `CM_NAME_RECOG` variable. ⚑ **Expands the sample-file PHI fields beyond `D-CX-17`'s minimum-necessary list — so decide it BEFORE the `O-CX-2` counsel package is assembled** |
+| `O-CX-27` | **Scope of the *about you* and interviewer blocks** (questionnaire sections I and J, `D-CX-25`) | ⚑ **New 2026-08-05.** **Not *whether* but *which*:** which characteristics are asked of the member versus taken from the LHH file under the existing BAA — self-report earns its cost mainly for **race and ethnicity**, where administrative Medicaid data is systematically worse. And whether the source's interviewer block **replaces** or **supplements** our fielding metadata — not both. ⚑ Every added breakdown is a suppression risk at agency level (§2.2) |
+| `O-CX-28` | **A1 `YES` but no contact in 3 months** — the instrument has no back-out screen | ⚑ **New 2026-08-05, owner-raised.** Recommendation: **keep it that way.** `Never` is a substantive answer, and a screen would move the most important members on the roster behind a skip and out of the denominators |
+| `O-CX-29` | **A2 has no *did not need to make contact* option** and is locked, so a non-event is scored as a service outcome inside the `CMH` composite | ⚑ **New 2026-08-05, owner-raised.** Recommendation: non-substantive code `-7`, never read aloud, excluded from the composite denominator, reported as a rate — the same logic that already attaches `-1`/`-2`/`-3` to locked items. **Changes a composite denominator, so settle it before the codebook** |
 **Closed 2026-07-30:** old §5 item 3 (`UNM-TRN` → tier A) · old §5 item 10 (framework header
 repo path corrected to `skills/domain-healthcare-cma/…`) · all seven flags raised in
 `tier-b-source-items.md` v0.1 §9 · `O-CX-18` and `O-CX-19`. **Session 5 has no remaining
@@ -192,92 +217,64 @@ precondition.**
 
 ## 7. STATUS (latest)
 
-**Session of 2026-07-30 — CX domain, session 4: owner sign-off applied; framework at v0.3.**
-*(Same day, after the framework was built: mode decision `D-CX-17` taken; register and configuration settled as `D-CX-18` and `D-CX-19`; session 5 brief issued; GitHub write access attempted and refused. See the closing bullets.)*
+**Session of 2026-08-05 — CX domain, session 7: documentation & freeze pass. ⏸ CX is now parked; Employee resumes next.**
 
 - **Done:**
-  - **Seven flags from `tier-b-source-items.md` v0.1 signed off and applied**, plus five decisions
-    the file surfaced outside the flag list. Recorded as **D-CX-10 … D-CX-16** in §4.
-  - **The framing decision was taken as a rule, not as a series of outcomes (D-CX-11).** After the
-    verbatim rationale was corrected, every remaining item-level trade-off had the tier B side being
-    paid for with a comparability that no longer exists — so deciding them one at a time would have
-    produced a predictable sequence of "tier A" outcomes that the next session could re-open
-    individually. The bright line (*transfers* → verbatim, *transfers in part* → tier A) disposes of
-    `CMH-B-02`, `CMH-B-03` and `UNM-TRN` at once and **closes the tier B set at six items.**
-  - **A false claim was found inside a blocking open item.** §9.2 justified the primary criterion
-    partly as "comparable to the national database" — the exact statement D-CX-10 falsifies. Struck;
-    the two surviving grounds carry the criterion, and `O-CX-1` is now decidable on its merits.
-  - **`module-framework-cx.md` v0.3 built and validated**: §0.1 fourth prohibited claim · §2.1 anchor
-    flag resolved and top-box rule qualified · §2.2 reliability argument strengthened with the
-    developer's own ESS figures · §2.4 `-B-` ID set closed · §2.5 rewritten (corrected rationale,
-    bright line, language rule, closed tier B table, source→questionnaire route, file-naming rule) ·
-    §3 relabelled · §4 rebuilt with the gate item · §5 rebuilt as four tier A items · §6, §7 overlaps
-    registered · §8.2 `UNM-TRN` resolved · §9.2 corrected · §12 benchmarking note repaired ·
-    §13 renumbered to `O-CX-n`.
-  - **Header repo path corrected** (old §5 item 10 closed) and the stale `D-CX-6` cross-reference
-    repaired — it read "excluded pending confirmation of item 13.1.2", which pointed at the
-    `UNM-TRN` flag and implied the care-manager-reporting exclusion was conditional. It never was.
-  - **Open-item numbering stabilised** to `O-CX-n` across both files, ending a divergence that had
-    the same item numbered 2 in one file and 3 in the other.
+  - **The owner's second reading is fully dispositioned.** Six comments: one closed a decision, one opened a
+    new deliverable, three raised questions that had no answer in the file, one asked where a document was.
+    **Two were applied, four were written down as numbered open items with options and a recommendation** —
+    none was answered by assumption to make the freeze look tidy.
+  - **`D-CX-24` — dual criterion declined, closing `O-CX-1`** after three askings across sessions 5–7.
+    `SEF-01…03` withdrawn to a **withdrawn-item annex** (questionnaire §9) with reasoning lines intact, IDs
+    retired. Framework §9.2 rewritten as a single criterion. **The divergence exhibit is withdrawn, not
+    rebuilt from `UNM`** — the honest move, and the first live application of the Employee-domain caveat
+    that a driver section is *absent, not padded for symmetry*.
+  - **`D-CX-25` — questionnaire sections I (*about you*) and J (*interviewer questions*) declared as slots
+    with preconditions and no text.** Accepted in principle; **not drafted**, because the verbatim strings
+    are not in `tier-b-source-items.md` and writing look-alike demographic items is the precise defect the
+    two-register apparatus exists to prevent. The source PDFs are page images, so extraction is a session of
+    its own.
+  - **`D-CX-26` — CX frozen** at questionnaire **v0.3** / framework **v0.6**.
+  - **Arithmetic regenerated, not hand-edited:** **19** closed bank items · expected **≈22** closed /
+    **≈35** questions · maximum **44** · minimum **19** · ~12 min nominal / ~14 achieved. **Under the
+    `D-CX-19` ceiling of 26 with margin — but the margin is pre-committed to Section I**, and that is stated
+    in three places so it is not read as spare capacity.
+  - **Locked strings re-verified: 58 of 58 byte-identical to v0.2**, extracted by carrier line and compared
+    in a standalone `qa_check.py`. No edit passed through a locked span; the new A1/A2/A3 notes are printed
+    beneath the blocks in our own register.
+  - ⚑ **Two self-corrections, both flagged rather than fixed quietly.** (1) The **RU reading copy of v0.2
+    misrenders A2** as a 4-point frequency item; A2 is a locked Yes/No. The working file was always correct.
+    Rule adopted: the reading copy is generated from the working file, never hand-written. (2) The
+    **locked-string count has moved three times** — 91, then 70, now 58 — every time because the extractor
+    was rewritten, never because a string changed. A QA figure that moves when the script does cannot be
+    cited as evidence; **one committed extractor before the codebook**.
+  - Framework footer version stamp corrected (read v0.4 at v0.5).
+  - Deliverables: `questionnaire-cx-member-experience.md` **v0.3** · `module-framework-cx.md` **v0.6** ·
+    `session-brief-cx-07.md` · this ROADMAP. Repo push still manual (connector 403).
 
-- **Not done, deliberately:** `tier-b-source-items.md` is **not re-transcribed**. Its flag table and
-  changelog need a two-block status patch to v0.2; re-emitting the whole file would mean
-  re-transcribing verbatim source text, which is the one operation §2.5 exists to prevent. The patch
-  blocks were supplied to the owner for paste-in.
+- **⚑ Open, carried into the thaw — five new, two standing:**
+  1. **`O-CX-2` — counsel scope.** ⚑ **Re-surfaced because the owner could not find it — and the reason he
+     could not is that there is nothing to find:** no counsel document exists, and questionnaire §3 is five
+     headings with requirements and no prose. The decision is one sentence: *does framework §10.3's "no
+     instrument text before counsel" bind the item bank, or only the introduction, consent, disclosure and
+     close?* All three questionnaire versions are built on **only the latter**.
+  2. **`O-CX-26` — identifying the care manager to the member.** The owner's sharpest point this pass.
+     Proposed protocol drafted at questionnaire §2.6, **not adopted**. ⚑ **It expands the PHI field list
+     `D-CX-17` narrowed, so it belongs in the same package as `O-CX-2`, decided before that package is
+     assembled rather than after.**
+  3. **`O-CX-25` — `EXIT_TYPE` after the `SEF` withdrawal.** Provisional rule in force; recommendation is to
+     rename the type to what it now measures.
+  4. **`O-CX-27` — scope of sections I and J.** Not *whether* but *which*: asked of the member vs. taken
+     from the LHH file under the existing BAA.
+  5. **`O-CX-28`, `O-CX-29`** — the two routing/response gaps at A1 and A2, each with a recommendation.
+  - Standing sign-off register, all stood through two passes without objection, all reversible: `O-CX-7`,
+    `O-CX-8`, `O-CX-9`. Owner's call, no deadline: `O-CX-12`.
 
-- **⚠ Repo state — write access attempted and refused; uploads then completed by the owner.** The
-  connector exposed write tools this session and a push was authorised and attempted; it failed with
-  `403 Resource not accessible by integration`, the same refusal as the previous three sessions.
-  **Visible tools are not a permitted App**: the GitHub App must be installed on
-  `andreiaktur-a11y/survey-skills` itself rather than only on the account, any new-permissions
-  notification accepted, and the connector re-authorised in Claude Settings → Connectors. Read
-  access works throughout and was used to verify every statement in this block.
+- **Next session (one task): Employee domain.** CX does not resume until Employee is finalised. When it
+  does, the entry point is `session-brief-cx-07.md`, and the **first CX task is the `tier-b-source-items.md`
+  v0.3 extraction** — it is the precondition for Section I and it does not need any of the open decisions
+  answered first, so it can run while they wait.
 
-  **Verified state at session close:** `ROADMAP.md` ✅ · `module-framework-cx.md` v0.3 ✅ ·
-  `compliance.md` v0.2 ✅ · `SKILL.md` v0.2 ✅ · `session-brief-cx-05.md` ✅ ·
-  `tier-b-source-items.md` **uploaded at v0.1, patch not applied** · the orphan PATCH file deleted ✅.
-
-  **The v0.2 patch was then applied without re-transcription.** Because the file is now in the repo,
-  it was **fetched and patched programmatically** rather than retyped — the objection that blocked
-  this earlier was never about effort, it was about having no independent source to verify against,
-  and the repo copy is that source. Diff verified: §1–§8 and §10 byte-identical to the uploaded file;
-  only the status line, the flag-F sentence, §9 and the changelog changed. **`tier-b-source-items.md`
-  v0.2 is the last file pending upload.**
-
-  *(A ROADMAP regression happened this day and is repaired by this file: the superseded 2026-07-15
-  project copy was uploaded over the current one, reverting §4 and §5 by two weeks. Git history holds
-  the intermediate 07-27 state.)*
-
-- **Next — session 5: questionnaire v0.1, no preconditions remaining.** Brief at
-  `references/session-brief-cx-05.md`; its §1 and §3 are answered by `D-CX-18` and `D-CX-19`. The
-  session opens by applying `D-CX-17` and `D-CX-18` as a scoped patch to `module-framework-cx.md`
-  → **v0.4**, then drafts. Deliverable is shaped for the owner's own edit pass: two visual registers
-  (`[LOCKED · TIER B · VERBATIM]` vs `[DRAFT · TIER A]`), a reasoning line on every editable item,
-  a scripted clarification beneath every tier A item (`O-CX-20`), and English first with Spanish
-  deferred until the edits settle. `O-CX-1` stays open but does not stop the draft: `SEF` is marked
-  provisional, and if the dual criterion is later declined, three items come out and nothing else
-  moves.
-
-  **Short alternatives if session 5 is deferred:** `O-CX-6` + `O-CX-3` (two narrow source questions,
-  external lookup) or `O-CX-13` (shared-layer IP tier sweep, mechanical, six files — the last place
-  in the repo where the superseded tier A claim on CAHPS survives).
-
-- **Also open, unrelated to CX:** the Employee row's "Website *what you receive*" cell in §3 is the
-  only unfilled Employee deliverable in Phase 1, and it sets the pattern for the other two domains.
-  Carried: `module-framework.md` §11.1 still lists three flags resolved 2026-07-19.
-
-- **Phase 1-A pipeline backlog** (unchanged, from the 2026-07-22 release): deterministic
-  `driver_models` spec (predictor missing-data rule, `WT` usage, exact Shapley procedure incl. R²
-  baseline over 2²⁰ subsets); psychometric evidence base (alpha/omega, item-total, dimensionality —
-  internal, feeds `BRN_TIER` re-anchoring after 3–5 engagements); deterministic/interpretation split
-  (`analysis_results.json` + `report_content.json` + template → DOCX); Northgate regression fixture
-  as the permanent pipeline test case; automated QA layer (unresolved `{{braces}}`, cross-section
-  number reconciliation, predictor count vs. model, suppression leakage, sample-mode language).
-  **Trigger: the first real engagement, not a calendar date.**
-
-- **Note for the next session:** open a fresh chat and attach `session-brief-cx-05.md`,
-  `module-framework-cx.md` v0.3, `tier-b-source-items.md` **v0.2** and `SKILL.md` v0.2. Fetch the ROADMAP
-  from the repo rather than attaching a local copy — the local-copy route is what caused this day's
-  regression:
-  `curl -sS https://raw.githubusercontent.com/andreiaktur-a11y/survey-skills/main/ROADMAP.md`
-  `Employee_Engagement_Retention_SAMPLE_v3_2.docx` is also still not in the repo.
+- **Standing constraints:** `O-CX-3` (SPA table currency) before any client-facing "Experience of Care"
+  claim · `O-CX-5` (per-agency completes as a costed design decision) before fieldwork is quoted ·
+  prohibited claims register in framework §0.1 unchanged.
